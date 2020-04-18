@@ -25,3 +25,6 @@ This is the same system, but now with 2 systolic arrays working on the same forc
 
 
 ![](figures/double_systolic.gif)
+
+
+I actually think it might be possible to remove this stalling cycle but offsetting the two arrays by one - starting the second array 1 cycle after the first one. It works on the simulation, but I guess that might not be the most rigorous way of verifying it. 
