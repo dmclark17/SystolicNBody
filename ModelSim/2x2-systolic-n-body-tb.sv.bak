@@ -60,6 +60,8 @@ real out_q_i;
 real out_q_j;
 real out_m_i;
 real out_m_j;
+real out_p_right;
+real out_p_left;
 
 systolic_n_body_2x2_cell UUT(.clk(clk),
 		             .reset(reset),
@@ -72,7 +74,9 @@ systolic_n_body_2x2_cell UUT(.clk(clk),
                              .out_q_i(out_q_i),
 			     .out_q_j(out_q_j),
                              .out_m_i(out_m_i),
-			     .out_m_j(out_m_j));
+			     .out_m_j(out_m_j),
+			     .out_p_right(out_p_right),
+			     .out_p_down(out_p_down));
 
 // Create a test
 initial begin

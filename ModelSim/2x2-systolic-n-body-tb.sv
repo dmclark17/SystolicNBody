@@ -48,7 +48,6 @@ endmodule
 module cell_tb;
 
 reg clk;
-reg reset;
 real in_q_i;
 real in_q_j;
 real in_m_i;
@@ -64,7 +63,6 @@ real out_p_right;
 real out_p_left;
 
 systolic_n_body_2x2_cell UUT(.clk(clk),
-		             .reset(reset),
                              .in_q_i(in_q_i),
 			     .in_q_j(in_q_j),
                              .in_m_i(in_m_i),
