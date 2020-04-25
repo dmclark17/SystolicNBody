@@ -123,7 +123,16 @@ systolic_n_body_2x2_cell b_00_01(.clk(clk),
                                  .in_p_right(pr_00_00), .in_p_down(pd_00_neg01),
                                  .out_q_i(q_00_10), .out_q_j(q_00_01),
                                  .out_m_i(m_00_10), .out_m_j(q_00_01),
-			         .out_p_right(pr_00_00),
+			         .out_p_right(pr_01_neg00),
                                  .out_p_down(pd_00_01));
+// TODO fix the q, m inputs
+systolic_n_body_2x2_cell b_00_11(.clk(clk),
+                                 .in_q_i(q_00_10), .in_q_j(q_1),
+                                 .in_m_i(m_00_10), .in_m_j(m_1),
+                                 .in_p_right(pr_00_00), .in_p_down(pd_00_neg01),
+                                 .out_q_i(q_00_10), .out_q_j(q_00_01),
+                                 .out_m_i(m_00_10), .out_m_j(q_00_01),
+			         .out_p_right(pr_01_neg10),
+                                 .out_p_down(pd_00_01));  // TODO no down
 
 endmodule  // end of 4 body module
