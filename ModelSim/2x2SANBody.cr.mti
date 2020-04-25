@@ -1,1 +1,15 @@
+C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv {2 {vlog -work work -sv -stats=none C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module verlet_tb
+-- Compiling module cell_tb
+-- Compiling module acceleration_tb
+** Warning: C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(169): (vlog-2283) Extra semicolon in $unit (global) scope.
+** Warning: C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(169): (vlog-2284) Empty $unit scope found.
+-- Compiling package _2x22dsystolic2dn2dbody2dtb_sv_unit
 
+Top level modules:
+	verlet_tb
+	cell_tb
+	acceleration_tb
+
+} {} {}}
