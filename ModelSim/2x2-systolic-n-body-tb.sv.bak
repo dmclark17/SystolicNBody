@@ -87,16 +87,21 @@ initial begin
   in_p_right = 0;
   in_p_down = 0;
   clk = 1;
-  #10
+  #10;
   $stop;
+  clk = 0;
+  #5;
   in_q_i = -2;
   in_q_j = 1;
   clk = 1;
-  #10
+  #10;
   $stop;
+  clk = 0;
+  #5;
   in_q_i = -2;
   in_q_j = 2;
-  #10
+  clk = 1;
+  #10;
   $stop;
 
 end
@@ -106,6 +111,120 @@ endmodule
 
 // testbench for 2x2 with 4 bodies
 module acceleration_tb;
+
+// Variables for the 
+real q_1,
+     q_2,
+     q_3,
+     q_4,
+     m_1,
+     m_2,
+     m_3,
+     m_4,
+     a_1,
+     a_2,
+     a_3,
+     a_4;
+
+// Variables to pass to UUT
+reg clk;
+real Q_0i,
+     Q_0j,
+     Q_1i,
+     Q_1j,
+     M_0i,
+     M_0j,
+     M_1i,
+     M_1j,
+     PD_0,
+     PD_1,
+     PR_0,
+     PR_1,
+     OPD_0,
+     OPD_1,
+     OPR_0,
+     OPR_1;
+
+systolic_2x2 UUT(.clk(clk),
+		 .q_0i(Q_0i),
+		 .q_0j(Q_0j),
+		 .q_1i(Q_1i),
+		 .q_1j(Q_1j),
+		 .m_0i(M_0i),
+		 .m_0j(M_0j),
+		 .m_1i(M_1i),
+		 .m_1j(M_1j),
+		 .pd_0(PD_0),
+		 .pd_1(PD_1),
+		 .pr_0(PR_0),
+		 .pr_1(PR_1),
+		 .out_pd_0(OPD_0),
+		 .out_pd_1(OPD_1),
+		 .out_pr_0(OPR_0),
+		 .out_pr_1(OPR_1));
+
+initial begin
+
+  clk = 0;
+  q_1 = -2.0;
+  q_2 = -1.0;
+  q_3 = 1.0;
+  q_4 = 2.0;
+  m_1 = 1.0;
+  m_2 = 1.0;
+  m_3 = 1.0;
+  m_4 = 1.0;
+  a_1 = 0;
+  a_2 = 0;
+  a_3 = 0;
+  a_4 = 0;
+
+  Q_0i = 0;
+  Q_1j = 0;
+  Q_0i = 0;
+  Q_1j = 0;
+  M_0i = 0;
+  M_1j = 0;
+  M_0i = 0;
+  M_1j = 0;
+  PD_0 = 0;
+  PD_1 = 0;
+  PR_0 = 0;
+  PR_1 = 0;
+  OPD_0 = 0;
+  OPD_1 = 0;
+  OPR_0 = 0;
+  OPR_1 = 0;
+
+  // Block order i: 10, 12, 32, 04
+  //             j: 10, 32, 34, 04
+  // Cycles
+  // First block
+  #5; Q_0i = q_1; Q_0j = q_1; Q_1i = 0; Q_1j = 0;
+      M_0i = q_1; M_0j = m_1; M_1i = 0; M_1j = 0;
+  // Second block
+  #10; Q_0i = q_1; Q_0j = q_3; Q_1i = q_2; Q_1j = q_2;
+       M_0i = m_1; M_0j = m_3; M_1i = m_2; M_1j = m_2;
+  // Third block
+  #10; Q_0i = q_3; Q_0j = q_3; Q_1i = q_2; Q_1j = q_4;
+       M_0i = m_3; M_0j = m_3; M_1i = m_2; M_1j = m_4;
+  // Fourth block
+  #10; Q_0i = 0; Q_0j = 0; Q_1i = q_4; Q_1j = q_4;
+       M_0i = 0; M_0j = 0; M_1i = m_4; M_1j = m_4;
+  #10;
+
+end
+
+// always have clk taking care of sync across cells
+initial begin
+  #5 clk = ~clk;
+end
+
+endmodule
+
+
+// testbench for 2x2 with 4 bodies
+module acceleration_block_tb;
 
 reg clk;
 real q_1,
@@ -161,4 +280,4 @@ initial begin
    forever #5 clk = ~clk;
 end
 
-endmodule;
+endmodule

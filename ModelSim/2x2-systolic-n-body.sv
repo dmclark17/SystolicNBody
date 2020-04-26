@@ -64,6 +64,71 @@ end
 endmodule  // end of Verlet integration module
 
 
+// This module computes a single 2x2 execution of the systolic array. TODO unknown whether pipelining works?
+module systolic_2x2 (input wire clk,
+		     input real q_0i,
+		     input real q_1i,
+		     input real q_0j,
+		     input real q_1j,
+		     input real m_0i,
+		     input real m_1i,
+		     input real m_0j,
+		     input real m_1j,
+		     input real pd_0,
+		     input real pd_1,
+		     input real pr_0,
+		     input real pr_1,
+	             output real out_pd_0,
+	             output real out_pd_1,
+	             output real out_pr_0,
+	             output real out_pr_1);
+
+// we define the accumulations as across each
+// Note 2: Yes, we have to do a separate one for each block and cell in
+// each execution. When we move to d > 1 then we can move to real matrices
+// (unknown whether SystemVerilog supports, I believe it does?).
+real pd_00, pd_01, pr_00, pr_10;
+
+// We also use wires for positions/masses between cells to accurately simulate
+real q_00i, q_00j, q_10i, q_01j,
+     m_00i, m_00j, m_10i, m_01j;
+
+systolic_n_body_2x2_cell b_00(.clk(clk),
+                              .in_q_i(q_0i), .in_q_j(q_0j),
+                              .in_m_i(m_0i), .in_m_j(m_0j),
+                              .in_p_right(pr_0), .in_p_down(pd_0),
+                              .out_q_i(q_00i), .out_q_j(q_00j),
+                              .out_m_i(m_00i), .out_m_j(m_00j),
+			      .out_p_right(pr_00),
+                              .out_p_down(pd_00));
+systolic_n_body_2x2_cell b_01(.clk(clk),
+                              .in_q_i(q_00i), .in_q_j(q_1i),
+                              .in_m_i(m_00i), .in_m_j(m_1),
+                              .in_p_right(pr_00), .in_p_down(pd_1),
+                              .out_q_i(), .out_q_j(q_01j),
+                              .out_m_i(), .out_m_j(m_01j),
+			      .out_p_right(out_pr_0),
+                              .out_p_down(pd_01));
+systolic_n_body_2x2_cell b_10(.clk(clk),
+                              .in_q_i(q_1i), .in_q_j(q_00j),
+                              .in_m_i(m_1i), .in_m_j(m_00j),
+                              .in_p_right(pr_1), .in_p_down(pd_00),
+                              .out_q_i(q_10i), .out_q_j(),
+                              .out_m_i(m_10i), .out_m_j(),
+			      .out_p_right(pr_10),
+                              .out_p_down(out_pd_0));
+systolic_n_body_2x2_cell b_11(.clk(clk),
+                              .in_q_i(q_10i), .in_q_j(q_01j),
+                              .in_m_i(m_10i), .in_m_j(m_01j),
+                              .in_p_right(pr_10), .in_p_down(pd_01),
+                              .out_q_i(), .out_q_j(),
+                              .out_m_i(), .out_m_j(),
+			      .out_p_right(out_pr_1),
+                              .out_p_down(out_pd_1));
+
+endmodule  // end of the 2x2 execution
+
+
 // This module computes the accelerations of 4 bodies using a 2x2 systolic array
 // For dynamic bodies, we may have to split into each execution of the array and
 // handle the pipelining in software? TODO on how to do that outside of testbench
