@@ -1212,3 +1212,996 @@ restart
 quit -sim
 # End time: 23:06:45 on Apr 26,2020, Elapsed time: 0:01:04
 # Errors: 0, Warnings: 1
+# Compile of 2x2-systolic-n-body.sv was successful.
+# Compile of 2x2-systolic-n-body-tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim work.acceleration_tb
+# vsim work.acceleration_tb 
+# Start time: 23:09:45 on Apr 26,2020
+# Loading sv_std.std
+# Loading work.acceleration_tb
+# Loading work.systolic_2x2
+# Loading work.systolic_n_body_2x2_cell
+run
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(215)
+#    Time: 15 ps  Iteration: 0  Instance: /acceleration_tb
+# Break in Module acceleration_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 215
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(219)
+#    Time: 25 ps  Iteration: 0  Instance: /acceleration_tb
+# Break in Module acceleration_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 219
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(224)
+#    Time: 35 ps  Iteration: 0  Instance: /acceleration_tb
+# Break in Module acceleration_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 224
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(229)
+#    Time: 45 ps  Iteration: 0  Instance: /acceleration_tb
+# Break in Module acceleration_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 229
+run
+quit -sim
+# End time: 23:14:45 on Apr 26,2020, Elapsed time: 0:05:00
+# Errors: 0, Warnings: 2
+# Compile of 2x2-systolic-n-body.sv was successful.
+# Compile of 2x2-systolic-n-body-tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim work.systolic_2x2
+# vsim work.systolic_2x2 
+# Start time: 23:23:19 on Apr 26,2020
+# Loading sv_std.std
+# Loading work.systolic_2x2
+# Loading work.systolic_n_body_2x2_cell
+quit -sim
+# End time: 23:23:32 on Apr 26,2020, Elapsed time: 0:00:13
+# Errors: 0, Warnings: 2
+vsim work.acceleration_tb
+# vsim work.acceleration_tb 
+# Start time: 23:23:34 on Apr 26,2020
+# Loading sv_std.std
+# Loading work.acceleration_tb
+# Loading work.systolic_2x2
+# Loading work.systolic_n_body_2x2_cell
+run
+run
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(216)
+#    Time: 20 ps  Iteration: 0  Instance: /acceleration_tb
+# Break in Module acceleration_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 216
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(220)
+#    Time: 30 ps  Iteration: 0  Instance: /acceleration_tb
+# Break in Module acceleration_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 220
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(225)
+#    Time: 40 ps  Iteration: 0  Instance: /acceleration_tb
+# Break in Module acceleration_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 225
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(232)
+#    Time: 50 ps  Iteration: 0  Instance: /acceleration_tb
+# Break in Module acceleration_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 232
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(239)
+#    Time: 60 ps  Iteration: 0  Instance: /acceleration_tb
+# Break in Module acceleration_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 239
+run
+quit -sim
+# End time: 23:31:44 on Apr 26,2020, Elapsed time: 0:08:10
+# Errors: 0, Warnings: 1
+# Compile of 2x2-systolic-n-body.sv was successful.
+# Compile of 2x2-systolic-n-body-tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim work.acceleration_tb
+# vsim work.acceleration_tb 
+# Start time: 23:32:16 on Apr 26,2020
+# Loading sv_std.std
+# Loading work.acceleration_tb
+# Loading work.systolic_2x2
+# Loading work.systolic_n_body_2x2_cell
+run
+run
+run
+run
+run
+quit -sim
+# End time: 23:33:42 on Apr 26,2020, Elapsed time: 0:01:26
+# Errors: 0, Warnings: 2
+# Compile of 2x2-systolic-n-body.sv was successful.
+# Compile of 2x2-systolic-n-body-tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim work.acceleration_tb
+# vsim work.acceleration_tb 
+# Start time: 23:34:06 on Apr 26,2020
+# Loading sv_std.std
+# Loading work.acceleration_tb
+# Loading work.systolic_2x2
+# Loading work.systolic_n_body_2x2_cell
+run
+run
+run
+run
+run
+run
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(217)
+#    Time: 40 ps  Iteration: 0  Instance: /acceleration_tb
+# Break in Module acceleration_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 217
+# Compile of 2x2-systolic-n-body.sv was successful.
+# Compile of 2x2-systolic-n-body-tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+quit -sim
+# Compile of 2x2-systolic-n-body.sv was successful.
+# Compile of 2x2-systolic-n-body-tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim work.acceleration_tb
+# End time: 23:36:08 on Apr 26,2020, Elapsed time: 0:02:02
+# Errors: 0, Warnings: 4
+# vsim work.acceleration_tb 
+# Start time: 23:36:08 on Apr 26,2020
+# Loading sv_std.std
+# Loading work.acceleration_tb
+# Loading work.systolic_2x2
+# Loading work.systolic_n_body_2x2_cell
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(219)
+#    Time: 50 ps  Iteration: 0  Instance: /acceleration_tb
+# Break in Module acceleration_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 219
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(223)
+#    Time: 60 ps  Iteration: 0  Instance: /acceleration_tb
+# Break in Module acceleration_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 223
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(228)
+#    Time: 70 ps  Iteration: 0  Instance: /acceleration_tb
+# Break in Module acceleration_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 228
+run
+quit -sim
+# End time: 23:37:27 on Apr 26,2020, Elapsed time: 0:01:19
+# Errors: 0, Warnings: 1
+# Compile of 2x2-systolic-n-body.sv was successful.
+# Compile of 2x2-systolic-n-body-tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim work.acceleration_tb
+# vsim work.acceleration_tb 
+# Start time: 23:38:03 on Apr 26,2020
+# Loading sv_std.std
+# Loading work.acceleration_tb
+# Loading work.systolic_2x2
+# Loading work.systolic_n_body_2x2_cell
+run
+run
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(217)
+#    Time: 20 ps  Iteration: 0  Instance: /acceleration_tb
+# Break in Module acceleration_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 217
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(221)
+#    Time: 30 ps  Iteration: 0  Instance: /acceleration_tb
+# Break in Module acceleration_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 221
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(226)
+#    Time: 40 ps  Iteration: 0  Instance: /acceleration_tb
+# Break in Module acceleration_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 226
+quit -sim
+# End time: 23:38:26 on Apr 26,2020, Elapsed time: 0:00:23
+# Errors: 0, Warnings: 2
+# Compile of 2x2-systolic-n-body.sv was successful.
+# Compile of 2x2-systolic-n-body-tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim work.acceleration_tb
+# vsim work.acceleration_tb 
+# Start time: 23:38:52 on Apr 26,2020
+# Loading sv_std.std
+# Loading work.acceleration_tb
+# Loading work.systolic_2x2
+# Loading work.systolic_n_body_2x2_cell
+run
+run
+run
+run
+run
+run
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(224)
+#    Time: 40 ps  Iteration: 0  Instance: /acceleration_tb
+# Break in Module acceleration_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 224
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run
+run
+quit -sim
+# End time: 23:41:48 on Apr 26,2020, Elapsed time: 0:02:56
+# Errors: 0, Warnings: 1
+# Compile of 2x2-systolic-n-body.sv was successful.
+# Compile of 2x2-systolic-n-body-tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+# Compile of 2x2-systolic-n-body.sv was successful.
+# Compile of 2x2-systolic-n-body-tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim work.acceleration_tb
+# vsim work.acceleration_tb 
+# Start time: 23:46:03 on Apr 26,2020
+# Loading sv_std.std
+# Loading work.acceleration_tb
+# Loading work.systolic_2x2
+# Loading work.systolic_n_body_2x2_cell
+run
+run
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(217)
+#    Time: 20 ps  Iteration: 0  Instance: /acceleration_tb
+# Break in Module acceleration_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 217
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(221)
+#    Time: 30 ps  Iteration: 0  Instance: /acceleration_tb
+# Break in Module acceleration_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 221
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(226)
+#    Time: 40 ps  Iteration: 0  Instance: /acceleration_tb
+# Break in Module acceleration_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 226
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(233)
+#    Time: 50 ps  Iteration: 0  Instance: /acceleration_tb
+# Break in Module acceleration_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 233
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(240)
+#    Time: 60 ps  Iteration: 0  Instance: /acceleration_tb
+# Break in Module acceleration_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 240
+run
+run
+run
+run
+run
+run
+run
+quit -sim
+# End time: 23:46:52 on Apr 26,2020, Elapsed time: 0:00:49
+# Errors: 0, Warnings: 3
+# Compile of 2x2-systolic-n-body-tb.sv failed with 15 errors.
+# Compile of 2x2-systolic-n-body-tb.sv failed with 15 errors.
+# Compile of 2x2-systolic-n-body-tb.sv failed with 4 errors.
+# Compile of 2x2-systolic-n-body-tb.sv failed with 3 errors.
+# Compile of 2x2-systolic-n-body-tb.sv failed with 7 errors.
+# Compile of 2x2-systolic-n-body-tb.sv failed with 3 errors.
+# Compile of 2x2-systolic-n-body-tb.sv was successful.
+vsim work.acceleration_time_tb
+# vsim work.acceleration_time_tb 
+# Start time: 00:20:57 on Apr 27,2020
+# Loading sv_std.std
+# Loading work.acceleration_time_tb
+# Loading work.systolic_2x2
+# Loading work.systolic_n_body_2x2_cell
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(358)
+#    Time: 20 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 358
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(374)
+#    Time: 30 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 374
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(358)
+#    Time: 50 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 358
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(374)
+#    Time: 60 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 374
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(358)
+#    Time: 80 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 358
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(374)
+#    Time: 90 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 374
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(358)
+#    Time: 110 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 358
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(374)
+#    Time: 120 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 374
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(358)
+#    Time: 140 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 358
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(374)
+#    Time: 150 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 374
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(358)
+#    Time: 170 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 358
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(374)
+#    Time: 180 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 374
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(358)
+#    Time: 200 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 358
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(374)
+#    Time: 210 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 374
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(358)
+#    Time: 230 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 358
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(374)
+#    Time: 240 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 374
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(358)
+#    Time: 260 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 358
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(374)
+#    Time: 270 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 374
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(358)
+#    Time: 290 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 358
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(374)
+#    Time: 300 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 374
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(358)
+#    Time: 320 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 358
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(374)
+#    Time: 330 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 374
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(358)
+#    Time: 350 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 358
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(374)
+#    Time: 360 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 374
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(358)
+#    Time: 380 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 358
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(374)
+#    Time: 390 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 374
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(358)
+#    Time: 410 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 358
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(374)
+#    Time: 420 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 374
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(358)
+#    Time: 440 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 358
+step -over
+step -over
+quit -sim
+# End time: 00:25:30 on Apr 27,2020, Elapsed time: 0:04:33
+# Errors: 0, Warnings: 8
+# Compile of 2x2-systolic-n-body.sv was successful.
+# Compile of 2x2-systolic-n-body-tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim work.acceleration_time_tb
+# vsim work.acceleration_time_tb 
+# Start time: 00:25:38 on Apr 27,2020
+# Loading sv_std.std
+# Loading work.acceleration_time_tb
+# Loading work.systolic_2x2
+# Loading work.systolic_n_body_2x2_cell
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(358)
+#    Time: 20 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 358
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(374)
+#    Time: 30 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 374
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(358)
+#    Time: 50 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 358
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(374)
+#    Time: 60 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 374
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(358)
+#    Time: 80 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 358
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(374)
+#    Time: 90 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 374
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(358)
+#    Time: 110 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 358
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(374)
+#    Time: 120 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 374
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(358)
+#    Time: 140 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 358
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(374)
+#    Time: 150 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 374
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(358)
+#    Time: 170 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 358
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(374)
+#    Time: 180 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 374
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(358)
+#    Time: 200 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 358
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(374)
+#    Time: 210 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 374
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(358)
+#    Time: 230 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 358
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(374)
+#    Time: 240 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 374
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(358)
+#    Time: 260 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 358
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(374)
+#    Time: 270 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 374
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(358)
+#    Time: 290 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 358
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(374)
+#    Time: 300 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 374
+run
+step -over
+step -over
+step -over
+step -over
+step -out
+step -over
+step -out
+step -out
+step -over
+step -out
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(358)
+#    Time: 320 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Next activity is in 5 ps.
+# 
+# 
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 358
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+quit -sim
+# Compile of 2x2-systolic-n-body.sv was successful.
+# Compile of 2x2-systolic-n-body-tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+# End time: 00:27:55 on Apr 27,2020, Elapsed time: 0:02:17
+# Errors: 0, Warnings: 3
+vsim work.acceleration_time_tb
+# vsim work.acceleration_time_tb 
+# Start time: 00:27:59 on Apr 27,2020
+# Loading sv_std.std
+# Loading work.acceleration_time_tb
+# Loading work.systolic_2x2
+# Loading work.systolic_n_body_2x2_cell
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(358)
+#    Time: 20 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 358
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(374)
+#    Time: 30 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 374
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(358)
+#    Time: 50 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 358
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(374)
+#    Time: 60 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 374
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(358)
+#    Time: 80 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 358
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(374)
+#    Time: 90 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 374
+step -over
+step -over
+restart
+run
+step -over
+step -over
+step -out
+step -out
+step -out
+step -out
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(358)
+#    Time: 20 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Next activity is in 5 ps.
+# 
+# 
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 358
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+# Next activity is in 5 ps.
+step -over
+step -over
+step -out
+step -out
+step -out
+step -out
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(374)
+#    Time: 30 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Next activity is in 5 ps.
+# 
+# 
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 374
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -out
+# Next activity is in 5 ps.
+step -out
+step -out
+step -out
+# Next activity is in 5 ps.
+step -over
+step -over
+# Next activity is in 5 ps.
+step -over
+step -over
+step -out
+step -out
+step -out
+step -over
+step -out
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(358)
+#    Time: 50 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Next activity is in 5 ps.
+# 
+# 
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 358
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(374)
+#    Time: 60 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 374
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+quit -sim
+# End time: 00:33:12 on Apr 27,2020, Elapsed time: 0:05:13
+# Errors: 0, Warnings: 1
+# Compile of 2x2-systolic-n-body.sv was successful.
+# Compile of 2x2-systolic-n-body-tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim work.acceleration_time_tb
+# vsim work.acceleration_time_tb 
+# Start time: 00:33:36 on Apr 27,2020
+# Loading sv_std.std
+# Loading work.acceleration_time_tb
+# Loading work.systolic_2x2
+# Loading work.systolic_n_body_2x2_cell
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(358)
+#    Time: 20 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 358
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(374)
+#    Time: 30 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 374
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(358)
+#    Time: 50 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 358
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(374)
+#    Time: 60 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 374
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(358)
+#    Time: 80 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 358
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(374)
+#    Time: 90 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 374
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(358)
+#    Time: 110 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 358
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(374)
+#    Time: 120 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 374
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(358)
+#    Time: 140 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 358
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(374)
+#    Time: 150 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 374
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(358)
+#    Time: 170 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 358
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(374)
+#    Time: 180 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 374
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(358)
+#    Time: 200 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 358
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(374)
+#    Time: 210 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 374
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(358)
+#    Time: 230 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 358
+step -over
+step -over
+step -over
+step -over
+step -over
+quit -sim
+# End time: 00:34:40 on Apr 27,2020, Elapsed time: 0:01:04
+# Errors: 0, Warnings: 2
+# Compile of 2x2-systolic-n-body.sv was successful.
+# Compile of 2x2-systolic-n-body-tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim work.acceleration_time_tb
+# vsim work.acceleration_time_tb 
+# Start time: 00:35:15 on Apr 27,2020
+# Loading sv_std.std
+# Loading work.acceleration_time_tb
+# Loading work.systolic_2x2
+# Loading work.systolic_n_body_2x2_cell
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(358)
+#    Time: 20 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 358
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(374)
+#    Time: 30 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 374
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(358)
+#    Time: 50 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 358
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(374)
+#    Time: 60 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 374
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(358)
+#    Time: 80 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 358
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(374)
+#    Time: 90 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 374
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(358)
+#    Time: 110 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 358
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(374)
+#    Time: 120 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 374
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(358)
+#    Time: 140 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 358
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(374)
+#    Time: 150 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 374
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(358)
+#    Time: 170 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 358
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(374)
+#    Time: 180 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 374
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(358)
+#    Time: 20 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 358
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(374)
+#    Time: 30 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 374
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+# Next activity is in 5 ps.
+step -over
+step -over
+step -over
+step -out
+step -over
+step -out
+step -over
+step -out
+step -over
+step -out
+# Next activity is in 5 ps.
+step -over
+step -over
+# Next activity is in 5 ps.
+step -over
+step -over
+step -over
+step -out
+step -over
+step -out
+step -over
+step -out
+step -over
+step -out
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(358)
+#    Time: 50 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Next activity is in 5 ps.
+# 
+# 
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 358
+step -over
+step -over
+quit -sim
+# Compile of 2x2-systolic-n-body.sv was successful.
+# Compile of 2x2-systolic-n-body-tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim work.acceleration_time_tb
+# End time: 00:37:34 on Apr 27,2020, Elapsed time: 0:02:19
+# Errors: 0, Warnings: 2
+# vsim work.acceleration_time_tb 
+# Start time: 00:37:35 on Apr 27,2020
+# Loading sv_std.std
+# Loading work.acceleration_time_tb
+# Loading work.systolic_2x2
+# Loading work.systolic_n_body_2x2_cell
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(345)
+#    Time: 10 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 345
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(358)
+#    Time: 20 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 358
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(374)
+#    Time: 30 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 374
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(345)
+#    Time: 40 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 345
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(358)
+#    Time: 50 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 358
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv(374)
+#    Time: 60 ps  Iteration: 0  Instance: /acceleration_time_tb
+# Break in Module acceleration_time_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv line 374
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+quit -sim
+# End time: 00:39:11 on Apr 27,2020, Elapsed time: 0:01:36
+# Errors: 0, Warnings: 1

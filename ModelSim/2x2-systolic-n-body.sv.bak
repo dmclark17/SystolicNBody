@@ -60,7 +60,7 @@ module systolic_n_body_2x2_integration(input wire clk,
 				       output real out_q_i_t);
 always @(posedge clk) begin
   // We don't multiply by gravity until the end
-  out_q_i_t <= 2.0 * in_q_i_t - in_q_i_told + in_dt * in_dt * in_a_t * 6.67e-10;
+  out_q_i_t <= 2.0 * in_q_i_t - in_q_i_told + in_dt * in_dt * in_a_t * 6.67e-11;
   out_q_i_told <= in_q_i_t;
 end
 
@@ -105,8 +105,8 @@ systolic_n_body_2x2_cell b_00(.clk(clk),
 			      .out_p_right(pr_00),
                               .out_p_down(pd_00));
 systolic_n_body_2x2_cell b_01(.clk(clk),
-                              .in_q_i(q_00i), .in_q_j(q_1i),
-                              .in_m_i(m_00i), .in_m_j(m_1i),
+                              .in_q_i(q_00i), .in_q_j(q_1j),
+                              .in_m_i(m_00i), .in_m_j(m_1j),
                               .in_p_right(pr_00), .in_p_down(pd_1),
                               .out_q_i(), .out_q_j(q_01j),
                               .out_m_i(), .out_m_j(m_01j),

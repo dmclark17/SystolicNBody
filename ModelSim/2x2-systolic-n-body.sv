@@ -60,7 +60,7 @@ module systolic_n_body_2x2_integration(input wire clk,
 				       output real out_q_i_t);
 always @(posedge clk) begin
   // We don't multiply by gravity until the end
-  out_q_i_t <= 2.0 * in_q_i_t - in_q_i_told + in_dt * in_dt * in_a_t * 6.67e-10;
+  out_q_i_t <= 2.0 * in_q_i_t - in_q_i_told + in_dt * in_dt * in_a_t * 6.67e-11;  // gravitional constant
   out_q_i_told <= in_q_i_t;
 end
 

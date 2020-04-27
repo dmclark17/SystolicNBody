@@ -109,10 +109,10 @@ end
 endmodule
 
 
-// testbench for 2x2 with 4 bodies
+// testbench for 2x2 acceleration with 4 bodies
 module acceleration_tb;
 
-// Variables for the 
+// Variables for the software side
 real q_1,
      q_2,
      q_3,
@@ -196,42 +196,37 @@ initial begin
   OPR_0 = 0;
   OPR_1 = 0;
 
-  // test a single execution - works
-  // #10; Q_0i = q_1; Q_0j = q_3; Q_1i = 0; Q_1j = 0;
-  //      M_0i = m_1; M_0j = m_3; M_1i = 0; M_1j = 0;
-  // #10; Q_0i = 0; Q_0j = 0; Q_1i = q_2; Q_1j = q_4;
-  //      M_0i = 0; M_0j = 0; M_1i = m_2; M_1j = m_4;
-  // $stop;
-  // #10; Q_1i = 0; Q_1j = 0;
-  //      M_1i = 0; M_1j = 0;
-  // $stop;
-  // #20; $stop;
+  
+
+  // A single timestep acceleration calculation - systolic array outputs are correct
   // Block order i: 10, 12, 32, 04
   //             j: 10, 32, 34, 04
-  // Cycles
   // First block first inputs
-  #5; Q_0i = q_1; Q_0j = q_1; Q_1i = 0; Q_1j = 0;
-       M_0i = q_1; M_0j = m_1; M_1i = 0; M_1j = 0;
-  // Second block first inputs
-  #10; $stop;
+  #10; Q_0i = q_1; Q_0j = q_1; Q_1i = 0; Q_1j = 0;
+       M_0i = m_1; M_0j = m_1; M_1i = 0; M_1j = 0;
+  #10;
   Q_0i = q_1; Q_0j = q_3; Q_1i = q_2; Q_1j = q_2;
   M_0i = m_1; M_0j = m_3; M_1i = m_2; M_1j = m_2;
-  // Third block first inputs - We now have block 0 pr0, pd0 outputs
-  #10; $stop; // Got OPD_0 for 0 here
+  #10;
   Q_0i = q_3; Q_0j = q_3; Q_1i = q_2; Q_1j = q_4;
   M_0i = m_3; M_0j = m_3; M_1i = m_2; M_1j = m_4;
-  a_2 = a_2 + OPD_0;  // Using diagonal trick instead
-  // Third block final inputs - We now have block 1 pr0, pd0 and block 0 pr1, pd1 outputs
-  #10; $stop; // Got OPR_0 for 0 here, OPD_0 for 1, OPR_1 
+  a_1 = a_1 + OPR_0;
+  #10;
   Q_0i = 0; Q_0j = 0; Q_1i = q_4; Q_1j = q_4;
   M_0i = 0; M_0j = 0; M_1i = m_4; M_1j = m_4;
-  a_1 = a_1 + OPR_0;
+  a_1 = a_1 + OPR_0;  // a_1 is done
+  a_2 = a_2 + OPR_1;  // Using diagonal trick instead
+  a_3 = a_3 + OPD_0;
   // reset inputs - We now have block 2 pr0, pd0 and block 1 pr1, pd1 outputs
   #10; $stop;
   Q_0i = 0; Q_0j = 0; Q_1i = 0; Q_1j = 0;
   M_0i = 0; M_0j = 0; M_1i = 0; M_1j = 0;
+  a_2 = a_2 + OPR_1;  // a_2 is done
+  a_3 = a_3 + OPR_0;  // a_3 is done, use diagonal trick (equivalent to -OPD_0, neg as diagonal)
+  a_4 = a_4 + OPD_1;
   // finally get block 2 pr1, pd1 outputs
   #10; $stop;
+  a_4 = a_4 + OPR_1;
   
 end
 
@@ -242,6 +237,165 @@ end
 
 endmodule
 
+
+// testbench for 2x2 with 4 bodies including integration
+module acceleration_time_tb;
+
+// Variables for the software side
+real q_1, q_1old,
+     q_2, q_2old,
+     q_3, q_3old,
+     q_4, q_4old,
+     m_1,
+     m_2,
+     m_3,
+     m_4,
+     a_1,
+     a_2,
+     a_3,
+     a_4,
+     tempq, dt;
+integer counter;
+
+// Variables to pass to UUTs
+reg clk;
+real Q_0i,
+     Q_0j,
+     Q_1i,
+     Q_1j,
+     M_0i,
+     M_0j,
+     M_1i,
+     M_1j,
+     PD_0,
+     PD_1,
+     PR_0,
+     PR_1,
+     OPD_0,
+     OPD_1,
+     OPR_0,
+     OPR_1;
+
+systolic_2x2 UUT(.clk(clk),
+		 .q_0i(Q_0i),
+		 .q_0j(Q_0j),
+		 .q_1i(Q_1i),
+		 .q_1j(Q_1j),
+		 .m_0i(M_0i),
+		 .m_0j(M_0j),
+		 .m_1i(M_1i),
+		 .m_1j(M_1j),
+		 .pd_0(PD_0),
+		 .pd_1(PD_1),
+		 .pr_0(PR_0),
+		 .pr_1(PR_1),
+		 .out_pd_0(OPD_0),
+		 .out_pd_1(OPD_1),
+		 .out_pr_0(OPR_0),
+		 .out_pr_1(OPR_1));
+
+initial begin
+
+  clk = 0;
+  q_1 = -2.0;
+  q_2 = -1.0;
+  q_3 = 1.0;
+  q_4 = 2.0;
+  q_1old = -2.0;
+  q_2old = -1.0;
+  q_3old = 1.0;
+  q_4old = 2.0;
+  m_1 = 1000000.0;
+  m_2 = 1000000.0;
+  m_3 = 1000000.0;
+  m_4 = 1000000.0;
+  a_1 = 0;
+  a_2 = 0;
+  a_3 = 0;
+  a_4 = 0;
+
+  Q_0i = 0;
+  Q_1j = 0;
+  Q_0i = 0;
+  Q_1j = 0;
+  M_0i = 0;
+  M_1j = 0;
+  M_0i = 0;
+  M_1j = 0;
+  PD_0 = 0;
+  PD_1 = 0;
+  PR_0 = 0;
+  PR_1 = 0;
+  OPD_0 = 0;
+  OPD_1 = 0;
+  OPR_0 = 0;
+  OPR_1 = 0;
+
+  dt = 0.01;
+
+  counter = 0;
+
+  // create a closed loop of integration through time - in order to get nearly full utilization
+  forever begin
+
+    // A single timestep acceleration calculation - systolic array outputs are correct
+    // Block order i: 10, 12, 32, 04
+    //             j: 10, 32, 34, 04
+    // First block first inputs  -- Note that we preload with the previous iterations 4 pos, but ignore output
+    #10;
+    if (counter > 0) begin
+      a_1 = a_1 + OPR_0;  // a_1 is done
+      a_2 = a_2 + OPR_1;  // Using diagonal trick instead
+      a_3 = a_3 + OPD_0;
+
+      tempq = q_1;
+      q_1 = 2.0 * tempq - q_1old + dt * dt * a_1 * 6.67e-11;
+      q_1old = tempq; a_1 = 0;
+    end
+    Q_0i = q_1; Q_0j = q_1; Q_1i = q_4; Q_1j = q_4;
+    M_0i = m_1; M_0j = m_1; M_1i = m_4; M_1j = m_4;
+    // Second block first inputs
+    #10; $stop;
+    if (counter > 0) begin
+      a_2 = a_2 + OPR_1;  // a_2 is done from previous execution
+      a_3 = a_3 + OPR_0;  // a_3 is done, use diagonal trick (equivalent to -OPD_0, neg as diagonal)
+      a_4 = a_4 + OPD_1;
+
+      tempq = q_2;
+      q_2 = 2.0 * tempq - q_2old + dt * dt * a_2 * 6.67e-11;
+      q_2old = tempq; a_2 = 0;
+      tempq = q_3;
+      q_3 = 2.0 * tempq - q_3old + dt * dt * a_3 * 6.67e-11;
+      q_3old = tempq; a_3 = 0;
+    end
+    Q_0i = q_1; Q_0j = q_3; Q_1i = q_2; Q_1j = q_2;
+    M_0i = m_1; M_0j = m_3; M_1i = m_2; M_1j = m_2;
+    // Third block first inputs - We now have block 0 pr0, pd0 outputs
+    #10; $stop; // Got OPD_0 for 0 here
+    if (counter > 0) begin
+      a_4 = a_4 + OPR_1;  // a_4 is done
+
+      tempq = q_4;
+      q_4 = 2.0 * tempq - q_4old + dt * dt * a_4 * 6.67e-11;
+      q_4old = tempq; a_4 = 0;
+    end
+    Q_0i = q_3; Q_0j = q_3; Q_1i = q_2; Q_1j = q_4;
+    M_0i = m_3; M_0j = m_3; M_1i = m_2; M_1j = m_4;
+    a_1 = a_1 + OPR_0;
+    // Third block final inputs - We now have block 1 pr0, pd0 and block 0 pr1, pd1 outputs
+    // return to the top of the loop
+    counter = counter + 1;
+
+  end
+
+end
+
+// always have clk taking care of sync across cells
+initial begin
+  forever #5 clk = ~clk;
+end
+
+endmodule
 
 // testbench for 2x2 with 4 bodies
 module acceleration_block_tb;
