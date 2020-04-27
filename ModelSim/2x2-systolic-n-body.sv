@@ -35,10 +35,13 @@ always @(posedge clk) begin
   end else begin
     f_ij = in_m_i * in_m_j * (in_q_j - in_q_i) / denom / denom / denom;  // Gravity causes errors, use in verlet
   end
+//end
+
+// always @(negedge clk) begin
   out_p_right <= in_p_right + f_ij;  // since 2x2, don't worry about diag
   out_p_down <= in_p_down - f_ij;
   out_q_i <= in_q_i;
-  out_m_j <= in_q_j;
+  out_q_j <= in_q_j;
   out_m_i <= in_m_i;
   out_m_j <= in_m_j;
 end
@@ -102,8 +105,8 @@ systolic_n_body_2x2_cell b_00(.clk(clk),
 			      .out_p_right(pr_00),
                               .out_p_down(pd_00));
 systolic_n_body_2x2_cell b_01(.clk(clk),
-                              .in_q_i(q_00i), .in_q_j(q_1i),
-                              .in_m_i(m_00i), .in_m_j(m_1),
+                              .in_q_i(q_00i), .in_q_j(q_1j),
+                              .in_m_i(m_00i), .in_m_j(m_1j),
                               .in_p_right(pr_00), .in_p_down(pd_1),
                               .out_q_i(), .out_q_j(q_01j),
                               .out_m_i(), .out_m_j(m_01j),

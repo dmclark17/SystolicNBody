@@ -196,28 +196,48 @@ initial begin
   OPR_0 = 0;
   OPR_1 = 0;
 
+  // test a single execution - works
+  // #10; Q_0i = q_1; Q_0j = q_3; Q_1i = 0; Q_1j = 0;
+  //      M_0i = m_1; M_0j = m_3; M_1i = 0; M_1j = 0;
+  // #10; Q_0i = 0; Q_0j = 0; Q_1i = q_2; Q_1j = q_4;
+  //      M_0i = 0; M_0j = 0; M_1i = m_2; M_1j = m_4;
+  // $stop;
+  // #10; Q_1i = 0; Q_1j = 0;
+  //      M_1i = 0; M_1j = 0;
+  // $stop;
+  // #20; $stop;
   // Block order i: 10, 12, 32, 04
   //             j: 10, 32, 34, 04
   // Cycles
-  // First block
+  // First block first inputs
   #5; Q_0i = q_1; Q_0j = q_1; Q_1i = 0; Q_1j = 0;
-      M_0i = q_1; M_0j = m_1; M_1i = 0; M_1j = 0;
-  // Second block
-  #10; Q_0i = q_1; Q_0j = q_3; Q_1i = q_2; Q_1j = q_2;
-       M_0i = m_1; M_0j = m_3; M_1i = m_2; M_1j = m_2;
-  // Third block
-  #10; Q_0i = q_3; Q_0j = q_3; Q_1i = q_2; Q_1j = q_4;
-       M_0i = m_3; M_0j = m_3; M_1i = m_2; M_1j = m_4;
-  // Fourth block
-  #10; Q_0i = 0; Q_0j = 0; Q_1i = q_4; Q_1j = q_4;
-       M_0i = 0; M_0j = 0; M_1i = m_4; M_1j = m_4;
-  #10;
-
+       M_0i = q_1; M_0j = m_1; M_1i = 0; M_1j = 0;
+  // Second block first inputs
+  #10; $stop;
+  Q_0i = q_1; Q_0j = q_3; Q_1i = q_2; Q_1j = q_2;
+  M_0i = m_1; M_0j = m_3; M_1i = m_2; M_1j = m_2;
+  // Third block first inputs - We now have block 0 pr0, pd0 outputs
+  #10; $stop; // Got OPD_0 for 0 here
+  Q_0i = q_3; Q_0j = q_3; Q_1i = q_2; Q_1j = q_4;
+  M_0i = m_3; M_0j = m_3; M_1i = m_2; M_1j = m_4;
+  a_2 = a_2 + OPD_0;  // Using diagonal trick instead
+  // Third block final inputs - We now have block 1 pr0, pd0 and block 0 pr1, pd1 outputs
+  #10; $stop; // Got OPR_0 for 0 here, OPD_0 for 1, OPR_1 
+  Q_0i = 0; Q_0j = 0; Q_1i = q_4; Q_1j = q_4;
+  M_0i = 0; M_0j = 0; M_1i = m_4; M_1j = m_4;
+  a_1 = a_1 + OPR_0;
+  // reset inputs - We now have block 2 pr0, pd0 and block 1 pr1, pd1 outputs
+  #10; $stop;
+  Q_0i = 0; Q_0j = 0; Q_1i = 0; Q_1j = 0;
+  M_0i = 0; M_0j = 0; M_1i = 0; M_1j = 0;
+  // finally get block 2 pr1, pd1 outputs
+  #10; $stop;
+  
 end
 
 // always have clk taking care of sync across cells
 initial begin
-  #5 clk = ~clk;
+  forever #5 clk = ~clk;
 end
 
 endmodule
