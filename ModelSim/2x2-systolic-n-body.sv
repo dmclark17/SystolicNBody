@@ -1,5 +1,5 @@
 // Systolic Arrays for n-body simulations
-// Developed 2020/4/24 by William McInroy, David Clark, and Aaron Jacobson
+// Developed 2020/4/24 by William McInroy
 //
 // This program implements a 2x2 systolic array for n-body simulations, note
 // that the size of the systolic array may be scaled, but requires blocking
@@ -67,7 +67,7 @@ end
 endmodule  // end of Verlet integration module
 
 
-// This module computes a single 2x2 execution of the systolic array. TODO unknown whether pipelining works?
+// This module computes a single 2x2 execution of the systolic array.
 module systolic_2x2 (input wire clk,
 		     input real q_0i,
 		     input real q_1i,

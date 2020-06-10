@@ -60,14 +60,14 @@ module systolic_n_body_2x2_integration(input wire clk,
 				       output real out_q_i_t);
 always @(posedge clk) begin
   // We don't multiply by gravity until the end
-  out_q_i_t <= 2.0 * in_q_i_t - in_q_i_told + in_dt * in_dt * in_a_t * 6.67e-11;
+  out_q_i_t <= 2.0 * in_q_i_t - in_q_i_told + in_dt * in_dt * in_a_t * 6.67e-11;  // gravitional constant
   out_q_i_told <= in_q_i_t;
 end
 
 endmodule  // end of Verlet integration module
 
 
-// This module computes a single 2x2 execution of the systolic array. TODO unknown whether pipelining works?
+// This module computes a single 2x2 execution of the systolic array.
 module systolic_2x2 (input wire clk,
 		     input real q_0i,
 		     input real q_1i,

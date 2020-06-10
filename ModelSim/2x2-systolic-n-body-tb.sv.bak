@@ -1,5 +1,5 @@
 // Systolic Arrays for n-body simulations
-// Developed 2020/4/24 by William McInroy, David Clark, and Aaron Jacobson
+// Developed 2020/4/24 by William McInroy
 //
 // This program simulates the implementation of the 2x2 systolic array cell
 // found in 2x2_systolic_n_body.sv
@@ -44,7 +44,7 @@ end
 endmodule
 
 
-// testbench for a single systolic cell
+// testbench for a single systolic cell -- Confirmed
 module cell_tb;
 
 reg clk;
@@ -109,7 +109,7 @@ end
 endmodule
 
 
-// testbench for 2x2 acceleration with 4 bodies
+// testbench for 2x2 acceleration with 4 bodies -- Confirmed
 module acceleration_tb;
 
 // Variables for the software side
@@ -238,7 +238,7 @@ end
 endmodule
 
 
-// testbench for 2x2 with 4 bodies including integration
+// testbench for 2x2 with 4 bodies including integration -- Confirmed
 module acceleration_time_tb;
 
 // Variables for the software side
@@ -342,7 +342,7 @@ initial begin
     // Block order i: 10, 12, 32, 04
     //             j: 10, 32, 34, 04
     // First block first inputs  -- Note that we preload with the previous iterations 4 pos, but ignore output
-    #10;
+    #10; // $stop;
     if (counter > 0) begin
       a_1 = a_1 + OPR_0;  // a_1 is done
       a_2 = a_2 + OPR_1;  // Using diagonal trick instead
@@ -355,7 +355,7 @@ initial begin
     Q_0i = q_1; Q_0j = q_1; Q_1i = q_4; Q_1j = q_4;
     M_0i = m_1; M_0j = m_1; M_1i = m_4; M_1j = m_4;
     // Second block first inputs
-    #10; $stop;
+    #10; // $stop;
     if (counter > 0) begin
       a_2 = a_2 + OPR_1;  // a_2 is done from previous execution
       a_3 = a_3 + OPR_0;  // a_3 is done, use diagonal trick (equivalent to -OPD_0, neg as diagonal)
@@ -371,7 +371,7 @@ initial begin
     Q_0i = q_1; Q_0j = q_3; Q_1i = q_2; Q_1j = q_2;
     M_0i = m_1; M_0j = m_3; M_1i = m_2; M_1j = m_2;
     // Third block first inputs - We now have block 0 pr0, pd0 outputs
-    #10; $stop; // Got OPD_0 for 0 here
+    #10; // $stop; // Got OPD_0 for 0 here
     if (counter > 0) begin
       a_4 = a_4 + OPR_1;  // a_4 is done
 
@@ -397,7 +397,7 @@ end
 
 endmodule
 
-// testbench for 2x2 with 4 bodies
+// testbench for 2x2 with 4 bodies -- Confirmed
 module acceleration_block_tb;
 
 reg clk;
