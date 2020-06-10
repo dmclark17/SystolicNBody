@@ -94,3 +94,35 @@ run
 quit -sim
 # End time: 11:15:25 on Jun 10,2020, Elapsed time: 0:00:42
 # Errors: 0, Warnings: 2
+# Compile of NxN-systolic-n-body.sv was successful.
+# Compile of NxN-systolic-n-body-tb.sv was successful.
+vsim work.acceleration_3D_tb
+# vsim work.acceleration_3D_tb 
+# Start time: 11:37:41 on Jun 10,2020
+# Loading sv_std.std
+# Loading work.acceleration_3D_tb
+# Loading work.systolic_2x2_3D
+# Loading work.systolic_n_body_3D_cell
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/NxN-systolic-n-body-tb.sv(199)
+#    Time: 50 ps  Iteration: 0  Instance: /acceleration_3D_tb
+# Break in Module acceleration_3D_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/NxN-systolic-n-body-tb.sv line 199
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/NxN-systolic-n-body-tb.sv(217)
+#    Time: 60 ps  Iteration: 0  Instance: /acceleration_3D_tb
+# Break in Module acceleration_3D_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/NxN-systolic-n-body-tb.sv line 217
+run
+run
+quit -sim
+# End time: 11:38:50 on Jun 10,2020, Elapsed time: 0:01:09
+# Errors: 0, Warnings: 3

@@ -67,23 +67,23 @@ endmodule  // end of single systolic cell module
 
 
 // This module computes a single 2x2 execution of the systolic array.
-module systolic_2x2 (input wire clk,
-		     input real q_0i[3],
-		     input real q_1i[3],
-		     input real q_0j[3],
-		     input real q_1j[3],
-		     input real m_0i,
-		     input real m_1i,
-		     input real m_0j,
-		     input real m_1j,
-		     input real pd_0[3],
-		     input real pd_1[3],
-		     input real pr_0[3],
-		     input real pr_1[3],
-	             output real out_pd_0[3],
-	             output real out_pd_1[3],
-	             output real out_pr_0[3],
-	             output real out_pr_1[3]);
+module systolic_2x2_3D (input wire clk,
+		        input real q_0i[3],
+		        input real q_1i[3],
+		        input real q_0j[3],
+		        input real q_1j[3],
+		        input real m_0i,
+		        input real m_1i,
+		        input real m_0j,
+		        input real m_1j,
+		        input real pd_0[3],
+		        input real pd_1[3],
+		        input real pr_0[3],
+		        input real pr_1[3],
+	                output real out_pd_0[3],
+	                output real out_pd_1[3],
+	                output real out_pr_0[3],
+	                output real out_pr_1[3]);
 
 // we define the accumulations as across each
 // Note 2: Yes, we have to do a separate one for each block and cell in

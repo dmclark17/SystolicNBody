@@ -36,17 +36,43 @@ Z6 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Liam/Documents/S
 Z7 o-work work -sv
 Z8 tCvgOpt 0
 n@_2x22dsystolic2dn2dbody2dtb_sv_unit
-vacceleration_block_tb
+vacceleration_3D_tb
 R0
-Z9 !s110 1591801661
+Z9 !s110 1591803451
 !i10b 1
-!s100 KZ:ml2Gj6>I==J]VgL[GK1
+!s100 LLY:i0<I6?CEQAScORNX:1
 Z10 !s11b Dg1SIo80bB@j0V0VzS_@n1
-ImkOK?ZTGjhT[J`UV=M7Oz1
+IN[VjA8CS9jX7So4QgCS]50
 Z11 VDg1SIo80bB@j0V0VzS_@n1
 S1
 R1
-Z12 w1591801646
+Z12 w1591803446
+Z13 8C:/Users/Liam/Documents/SystolicNBody/ModelSim/NxN-systolic-n-body-tb.sv
+Z14 FC:/Users/Liam/Documents/SystolicNBody/ModelSim/NxN-systolic-n-body-tb.sv
+!i122 212
+L0 79 152
+R4
+r1
+!s85 0
+31
+Z15 !s108 1591803451.000000
+!s107 C:/Users/Liam/Documents/SystolicNBody/ModelSim/NxN-systolic-n-body-tb.sv|
+Z16 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Liam/Documents/SystolicNBody/ModelSim/NxN-systolic-n-body-tb.sv|
+!i113 1
+R7
+R8
+nacceleration_3@d_tb
+vacceleration_block_tb
+R0
+Z17 !s110 1591801661
+!i10b 1
+!s100 KZ:ml2Gj6>I==J]VgL[GK1
+R10
+ImkOK?ZTGjhT[J`UV=M7Oz1
+R11
+S1
+R1
+Z18 w1591801646
 R2
 R3
 !i122 206
@@ -55,7 +81,7 @@ R4
 r1
 !s85 0
 31
-Z13 !s108 1591801661.000000
+Z19 !s108 1591801661.000000
 R5
 R6
 !i113 1
@@ -63,7 +89,7 @@ R7
 R8
 vacceleration_tb
 R0
-R9
+R17
 !i10b 1
 !s100 TCOV3M5g[2<8Dfn7Ll7[n3
 R10
@@ -71,7 +97,7 @@ IdXFWGBUo;ZHHI>6]>KNb93
 R11
 S1
 R1
-R12
+R18
 R2
 R3
 !i122 206
@@ -80,7 +106,7 @@ R4
 r1
 !s85 0
 31
-R13
+R19
 R5
 R6
 !i113 1
@@ -88,7 +114,7 @@ R7
 R8
 vacceleration_time_tb
 R0
-R9
+R17
 !i10b 1
 !s100 McRTZbZYMS4@fDi3MeNdh0
 R10
@@ -96,7 +122,7 @@ I:;j9^<cn^KCj0;?bNN5Kk3
 R11
 S1
 R1
-R12
+R18
 R2
 R3
 !i122 206
@@ -105,7 +131,7 @@ R4
 r1
 !s85 0
 31
-R13
+R19
 R5
 R6
 !i113 1
@@ -113,7 +139,7 @@ R7
 R8
 vcell_tb
 R0
-R9
+R17
 !i10b 1
 !s100 H;>kk=NcIb2:SNeW6B3Y12
 R10
@@ -121,7 +147,7 @@ Ii:B5HD9Tm5_Sk_[B6YN@X0
 R11
 S1
 R1
-R12
+R18
 R2
 R3
 !i122 206
@@ -130,70 +156,70 @@ R4
 r1
 !s85 0
 31
-R13
+R19
 R5
 R6
 !i113 1
 R7
 R8
 Ecif
-Z14 w1582886329
+Z20 w1582886329
 !i122 1
 R1
-Z15 8C:/intelFPGA_pro/20.1/modelsim_ase/examples/vhdl/foreign/example_one/example1.vhd
-Z16 FC:/intelFPGA_pro/20.1/modelsim_ase/examples/vhdl/foreign/example_one/example1.vhd
+Z21 8C:/intelFPGA_pro/20.1/modelsim_ase/examples/vhdl/foreign/example_one/example1.vhd
+Z22 FC:/intelFPGA_pro/20.1/modelsim_ase/examples/vhdl/foreign/example_one/example1.vhd
 l0
 L10 1
 V==fVk53U:MNl@RjFQV05Y1
 !s100 SJUHimnK?<S;EizFJIg^U2
-Z17 OV;C;2020.1;71
+Z23 OV;C;2020.1;71
 32
-Z18 !s110 1587764254
+Z24 !s110 1587764254
 !i10b 1
-Z19 !s108 1587764253.000000
-Z20 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/intelFPGA_pro/20.1/modelsim_ase/examples/vhdl/foreign/example_one/example1.vhd|
-Z21 !s107 C:/intelFPGA_pro/20.1/modelsim_ase/examples/vhdl/foreign/example_one/example1.vhd|
+Z25 !s108 1587764253.000000
+Z26 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/intelFPGA_pro/20.1/modelsim_ase/examples/vhdl/foreign/example_one/example1.vhd|
+Z27 !s107 C:/intelFPGA_pro/20.1/modelsim_ase/examples/vhdl/foreign/example_one/example1.vhd|
 !i113 1
-Z22 o-work work -2002 -explicit
-Z23 tExplicit 1 CvgOpt 0
+Z28 o-work work -2002 -explicit
+Z29 tExplicit 1 CvgOpt 0
 Artl
-Z24 DEx4 work 3 cif 0 22 ==fVk53U:MNl@RjFQV05Y1
+Z30 DEx4 work 3 cif 0 22 ==fVk53U:MNl@RjFQV05Y1
 !i122 1
 l35
 L34 7
 Vo0DfgWd_2n4bUXcB?H]JS2
 !s100 NUi11>`7gdh;<aaA;Y8EV2
-R17
-32
-R18
-!i10b 1
-R19
-R20
-R21
-!i113 1
-R22
 R23
-Aonly
+32
 R24
+!i10b 1
+R25
+R26
+R27
+!i113 1
+R28
+R29
+Aonly
+R30
 !i122 1
 l29
 L26 7
 VSm`a=4RH30gdMCRSa?0_S0
 !s100 XEllFF0212=gB@n;nYJL00
-R17
+R23
 32
 xfOa
-R18
+R24
 !i10b 1
-R19
-R20
-R21
+R25
+R26
+R27
 !i113 1
-R22
-R23
+R28
+R29
 vNxN_cell_tb
 R0
-!s110 1591802074
+R9
 !i10b 1
 !s100 K`g1o1fS[FV4NSF;^c;[00
 R10
@@ -201,25 +227,25 @@ I9M4=?Yhj<59IYMVoK0ffo0
 R11
 S1
 R1
-w1591802067
-8C:/Users/Liam/Documents/SystolicNBody/ModelSim/NxN-systolic-n-body-tb.sv
-FC:/Users/Liam/Documents/SystolicNBody/ModelSim/NxN-systolic-n-body-tb.sv
-!i122 210
+R12
+R13
+R14
+!i122 212
 L0 9 67
 R4
 r1
 !s85 0
 31
-!s108 1591802074.000000
-!s107 C:/Users/Liam/Documents/SystolicNBody/ModelSim/NxN-systolic-n-body-tb.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Liam/Documents/SystolicNBody/ModelSim/NxN-systolic-n-body-tb.sv|
+R15
+Z31 !s107 C:/Users/Liam/Documents/SystolicNBody/ModelSim/NxN-systolic-n-body-tb.sv|
+R16
 !i113 1
 R7
 R8
 n@nx@n_cell_tb
 vsystolic_2x2
 R0
-Z25 !s110 1591801577
+!s110 1591801577
 !i10b 1
 !s100 W?hBn32zf:HBi1`^b9fC32
 R10
@@ -227,24 +253,50 @@ IbLk6Laae[CjL>H7Noo5lO2
 R11
 S1
 R1
-Z26 w1591801514
-Z27 8C:/Users/Liam/Documents/SystolicNBody/ModelSim/NxN-systolic-n-body.sv
-Z28 FC:/Users/Liam/Documents/SystolicNBody/ModelSim/NxN-systolic-n-body.sv
+w1591801514
+Z32 8C:/Users/Liam/Documents/SystolicNBody/ModelSim/NxN-systolic-n-body.sv
+Z33 FC:/Users/Liam/Documents/SystolicNBody/ModelSim/NxN-systolic-n-body.sv
 !i122 204
-L0 70 61
+Z34 L0 70 61
 R4
 r1
 !s85 0
 31
-Z29 !s108 1591801576.000000
-Z30 !s107 C:/Users/Liam/Documents/SystolicNBody/ModelSim/NxN-systolic-n-body.sv|
-Z31 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Liam/Documents/SystolicNBody/ModelSim/NxN-systolic-n-body.sv|
+!s108 1591801576.000000
+Z35 !s107 C:/Users/Liam/Documents/SystolicNBody/ModelSim/NxN-systolic-n-body.sv|
+Z36 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Liam/Documents/SystolicNBody/ModelSim/NxN-systolic-n-body.sv|
 !i113 1
 R7
 R8
+vsystolic_2x2_3D
+R0
+Z37 !s110 1591802301
+!i10b 1
+!s100 cVR0^RBjBV5hJVP<gf?540
+R10
+IlfdAmW;5<fbnW11JmFU^F0
+R11
+S1
+R1
+Z38 w1591802289
+R32
+R33
+!i122 211
+R34
+R4
+r1
+!s85 0
+31
+Z39 !s108 1591802301.000000
+R35
+R36
+!i113 1
+R7
+R8
+nsystolic_2x2_3@d
 vsystolic_4_body_2x2
 R0
-Z32 !s110 1591801250
+Z40 !s110 1591801250
 !i10b 1
 !s100 9jb;EdYZ9h[GcEooVKlTY3
 R10
@@ -252,18 +304,18 @@ I1k=FTjL4bDKcoSZNW;<`z0
 R11
 S1
 R1
-Z33 w1591801020
-Z34 8C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body.sv
-Z35 FC:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body.sv
+Z41 w1591801020
+Z42 8C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body.sv
+Z43 FC:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body.sv
 !i122 199
 L0 138 132
 R4
 r1
 !s85 0
 31
-Z36 !s108 1591801250.000000
-Z37 !s107 C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body.sv|
-Z38 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body.sv|
+Z44 !s108 1591801250.000000
+Z45 !s107 C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body.sv|
+Z46 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body.sv|
 !i113 1
 R7
 R8
@@ -305,8 +357,8 @@ R11
 S1
 R1
 w1587782136
-R34
-R35
+R42
+R43
 !i122 41
 L0 68 4
 R4
@@ -314,14 +366,14 @@ r1
 !s85 0
 31
 !s108 1587782142.000000
-R37
-R38
+R45
+R46
 !i113 1
 R7
 R8
 vsystolic_n_body_2x2_cell
 R0
-R32
+R40
 !i10b 1
 !s100 0S78EbRjXKib11>13<JkT2
 R10
@@ -329,24 +381,24 @@ IHi4j3Nd_[o<o7X8_Bf0JM0
 R11
 S1
 R1
-R33
-R34
-R35
+R41
+R42
+R43
 !i122 199
 L0 13 37
 R4
 r1
 !s85 0
 31
-R36
-R37
-R38
+R44
+R45
+R46
 !i113 1
 R7
 R8
 vsystolic_n_body_2x2_integration
 R0
-R32
+R40
 !i10b 1
 !s100 <`lPEUE2`eXb:n;9M[1cc2
 R10
@@ -354,24 +406,24 @@ IY3J[bgoEXJjXE7P8m22C00
 R11
 S1
 R1
-R33
-R34
-R35
+R41
+R42
+R43
 !i122 199
 L0 54 14
 R4
 r1
 !s85 0
 31
-R36
-R37
-R38
+R44
+R45
+R46
 !i113 1
 R7
 R8
 vsystolic_n_body_3D_cell
 R0
-R25
+R37
 !i10b 1
 !s100 5lO:kETlf<S@_22;NT`=z1
 R10
@@ -379,18 +431,18 @@ I[F;4L2hfF;mO1`>V<nY]z2
 R11
 S1
 R1
-R26
-R27
-R28
-!i122 204
+R38
+R32
+R33
+!i122 211
 L0 13 54
 R4
 r1
 !s85 0
 31
-R29
-R30
-R31
+R39
+R35
+R36
 !i113 1
 R7
 R8
@@ -422,46 +474,46 @@ r1
 R7
 R8
 Everification
-R14
+R20
 !i122 1
 R1
-R15
-R16
+R21
+R22
 l0
 L44 1
 VagA4nbS1O=2Pj?TAFV0O?0
 !s100 5Z<IUB5d8b<Nb6DbA^V931
-R17
-32
-R18
-!i10b 1
-R19
-R20
-R21
-!i113 1
-R22
 R23
-Acomparison
+32
 R24
+!i10b 1
+R25
+R26
+R27
+!i113 1
+R28
+R29
+Acomparison
+R30
 DEx4 work 12 verification 0 22 agA4nbS1O=2Pj?TAFV0O?0
 !i122 1
 l86
 L47 93
 V]4ogF2;6`dc^`SFnRg6193
 !s100 GHYR<Jnm[04^9CF9IkAf42
-R17
-32
-R18
-!i10b 1
-R19
-R20
-R21
-!i113 1
-R22
 R23
+32
+R24
+!i10b 1
+R25
+R26
+R27
+!i113 1
+R28
+R29
 vverlet_tb
 R0
-R9
+R17
 !i10b 1
 !s100 mP`;_zYbVFk]PVMGbNc@I0
 R10
@@ -469,7 +521,7 @@ IV2<;I5`iVEVP;[54BS^]f2
 R11
 S1
 R1
-R12
+R18
 R2
 R3
 !i122 206
@@ -478,7 +530,7 @@ R4
 r1
 !s85 0
 31
-R13
+R19
 R5
 R6
 !i113 1
