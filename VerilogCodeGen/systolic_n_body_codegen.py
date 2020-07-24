@@ -133,7 +133,7 @@ def generate_code(N):
 
     # the systolic cells. Cases for edges of array use input/output of module
     code += ('\n\n' + '\n'
-             .join(['  systolic_n_body_3D_cell b_{0}_{1}(clk(clk),'
+             .join(['  systolic_n_body_3D_cell b_{0}_{1}(.clk(clk),'
                     .format(i, j) +
                     '\n' + (' ' * len('  systolic_n_body_3D_cell b_{0}_{1}('
                                       .format(i, j))) +
@@ -144,14 +144,14 @@ def generate_code(N):
                             'q_{0}_{1}_j'.format(i - 1, j)) +
                     '\n' + (' ' * len('  systolic_n_body_3D_cell b_{0}_{1}('
                                       .format(i, j))) +
-                    '.in_m_i({0}), in_m_j({1}),'
+                    '.in_m_i({0}), .in_m_j({1}),'
                     .format('m_{0}i'.format(i) if j == 0 else
                             'm_{0}_{1}_i'.format(i, j - 1),
                             'm_{0}j'.format(j) if i == 0 else
                             'm_{0}_{1}_j'.format(i - 1, j)) +
                     '\n' + (' ' * len('  systolic_n_body_3D_cell b_{0}_{1}('
                                       .format(i, j))) +
-                    '.in_p_right({0}), in_p_down({1}),'
+                    '.in_p_right({0}), .in_p_down({1}),'
                     .format('pr_{0}'.format(i) if j == 0 else
                             'pr_{0}_{1}'.format(i, j - 1),
                             'pd_{0}'.format(j) if i == 0 else

@@ -1,128 +1,133 @@
-# Compile of 2x2-systolic-n-body-tb.sv was successful.
-# Compile of 2x2-systolic-n-body.sv was successful.
-# Compile of NxN-systolic-n-body.sv failed with 2 errors.
-# Compile of NxN-systolic-n-body.sv was successful.
 # Compile of NxN-systolic-n-body-tb.sv was successful.
-# Load canceled
-# Compile of NxN-systolic-n-body-tb.sv was successful.
-vsim work.NxN_cell_tb
-# vsim work.NxN_cell_tb 
-# Start time: 11:02:41 on Jun 10,2020
-# Loading sv_std.std
-# Loading work.NxN_cell_tb
-# Loading work.systolic_n_body_2x2_cell
-# ** Error: (vsim-3906) Connection type 'real$[0:2]' is incompatible with 'real' for  port (in_q_i):  Can't mix packed and unpacked types.
-#    Time: 0 ps  Iteration: 0  Instance: /NxN_cell_tb/UUT File: C:/Users/Liam/Documents/SystolicNBody/ModelSim/NxN-systolic-n-body-tb.sv Line: 26
-# ** Error: (vsim-3906) Connection type 'real$[0:2]' is incompatible with 'real' for  port (in_q_j):  Can't mix packed and unpacked types.
-#    Time: 0 ps  Iteration: 0  Instance: /NxN_cell_tb/UUT File: C:/Users/Liam/Documents/SystolicNBody/ModelSim/NxN-systolic-n-body-tb.sv Line: 26
-# ** Error: (vsim-3906) Connection type 'real$[0:2]' is incompatible with 'real' for  port (in_p_right):  Can't mix packed and unpacked types.
-#    Time: 0 ps  Iteration: 0  Instance: /NxN_cell_tb/UUT File: C:/Users/Liam/Documents/SystolicNBody/ModelSim/NxN-systolic-n-body-tb.sv Line: 26
-# ** Error: (vsim-3906) Connection type 'real$[0:2]' is incompatible with 'real' for  port (in_p_down):  Can't mix packed and unpacked types.
-#    Time: 0 ps  Iteration: 0  Instance: /NxN_cell_tb/UUT File: C:/Users/Liam/Documents/SystolicNBody/ModelSim/NxN-systolic-n-body-tb.sv Line: 26
-# ** Error: (vsim-3906) Connection type 'real$[0:2]' is incompatible with 'real' for  port (out_q_i):  Can't mix packed and unpacked types.
-#    Time: 0 ps  Iteration: 0  Instance: /NxN_cell_tb/UUT File: C:/Users/Liam/Documents/SystolicNBody/ModelSim/NxN-systolic-n-body-tb.sv Line: 26
-# ** Error: (vsim-3906) Connection type 'real$[0:2]' is incompatible with 'real' for  port (out_q_j):  Can't mix packed and unpacked types.
-#    Time: 0 ps  Iteration: 0  Instance: /NxN_cell_tb/UUT File: C:/Users/Liam/Documents/SystolicNBody/ModelSim/NxN-systolic-n-body-tb.sv Line: 26
-# ** Error: (vsim-3906) Connection type 'real$[0:2]' is incompatible with 'real' for  port (out_p_right):  Can't mix packed and unpacked types.
-#    Time: 0 ps  Iteration: 0  Instance: /NxN_cell_tb/UUT File: C:/Users/Liam/Documents/SystolicNBody/ModelSim/NxN-systolic-n-body-tb.sv Line: 26
-# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (1) for port 'out_p_down'. The port definition is at: C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body.sv(25).
-#    Time: 0 ps  Iteration: 0  Instance: /NxN_cell_tb/UUT File: C:/Users/Liam/Documents/SystolicNBody/ModelSim/NxN-systolic-n-body-tb.sv Line: 26
-# Error loading design
-# End time: 11:02:42 on Jun 10,2020, Elapsed time: 0:00:01
-# Errors: 7, Warnings: 10
-# Compile of NxN-systolic-n-body.sv was successful.
-# Compile of NxN-systolic-n-body-tb.sv was successful.
-vsim work.NxN_cell_tb
-# vsim work.NxN_cell_tb 
-# Start time: 11:06:29 on Jun 10,2020
-# Loading sv_std.std
-# Loading work.NxN_cell_tb
-# Loading work.systolic_n_body_3D_cell
-# ** Error (suppressible): (vsim-12027) Array connection type 'wire' is incompatible with 'real$[0:2]' for  port (out_p_down):  Can't mix packed and unpacked types.
-#    Time: 0 ps  Iteration: 0  Instance: /NxN_cell_tb/UUT File: C:/Users/Liam/Documents/SystolicNBody/ModelSim/NxN-systolic-n-body-tb.sv Line: 26
-# Error loading design
-# End time: 11:06:30 on Jun 10,2020, Elapsed time: 0:00:01
-# Errors: 1, Warnings: 3
-# Compile of 2x2-systolic-n-body-tb.sv was successful.
-# Compile of NxN-systolic-n-body-tb.sv was successful.
-vsim work.NxN_cell_tb
-# vsim work.NxN_cell_tb 
-# Start time: 11:07:54 on Jun 10,2020
-# Loading sv_std.std
-# Loading work.NxN_cell_tb
-# Loading work.systolic_n_body_3D_cell
-# Compile of NxN-systolic-n-body-tb.sv was successful.
-run
-# Break key hit
-# Break key hit
-# Compile of NxN-systolic-n-body-tb.sv failed with 1 errors.
-quit -sim
-# End time: 11:11:18 on Jun 10,2020, Elapsed time: 0:03:24
-# Errors: 0, Warnings: 5
-# Compile of NxN-systolic-n-body-tb.sv was successful.
-vsim work.NxN_cell_tb
-# vsim work.NxN_cell_tb 
-# Start time: 11:11:37 on Jun 10,2020
-# Loading sv_std.std
-# Loading work.NxN_cell_tb
-# Loading work.systolic_n_body_3D_cell
-run
-run
-# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/NxN-systolic-n-body-tb.sv(60)
-#    Time: 10 ps  Iteration: 0  Instance: /NxN_cell_tb
-# Break in Module NxN_cell_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/NxN-systolic-n-body-tb.sv line 60
-run
-# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/NxN-systolic-n-body-tb.sv(64)
-#    Time: 15 ps  Iteration: 0  Instance: /NxN_cell_tb
-# Break in Module NxN_cell_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/NxN-systolic-n-body-tb.sv line 64
-run
-quit -sim
-# End time: 11:13:47 on Jun 10,2020, Elapsed time: 0:02:10
-# Errors: 0, Warnings: 2
-# Compile of NxN-systolic-n-body-tb.sv was successful.
-vsim work.NxN_cell_tb
-# vsim work.NxN_cell_tb 
-# Start time: 11:14:43 on Jun 10,2020
-# Loading sv_std.std
-# Loading work.NxN_cell_tb
-# Loading work.systolic_n_body_3D_cell
-run
-# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/NxN-systolic-n-body-tb.sv(60)
-#    Time: 5 ps  Iteration: 0  Instance: /NxN_cell_tb
-# Break in Module NxN_cell_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/NxN-systolic-n-body-tb.sv line 60
-run
-quit -sim
-# End time: 11:15:25 on Jun 10,2020, Elapsed time: 0:00:42
-# Errors: 0, Warnings: 2
-# Compile of NxN-systolic-n-body.sv was successful.
-# Compile of NxN-systolic-n-body-tb.sv was successful.
+# Compile of test_code_gen_2x2.sv failed with 4 errors.
+# Compile of test_code_gen_2x2.sv failed with 4 errors.
+# Compile of test_code_gen_2x2.sv was successful.
 vsim work.acceleration_3D_tb
 # vsim work.acceleration_3D_tb 
-# Start time: 11:37:41 on Jun 10,2020
+# Start time: 13:23:24 on Jul 24,2020
 # Loading sv_std.std
 # Loading work.acceleration_3D_tb
 # Loading work.systolic_2x2_3D
 # Loading work.systolic_n_body_3D_cell
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/NxN-systolic-n-body-tb.sv(199)
-#    Time: 50 ps  Iteration: 0  Instance: /acceleration_3D_tb
-# Break in Module acceleration_3D_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/NxN-systolic-n-body-tb.sv line 199
-run
-run
-# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/NxN-systolic-n-body-tb.sv(217)
-#    Time: 60 ps  Iteration: 0  Instance: /acceleration_3D_tb
-# Break in Module acceleration_3D_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/NxN-systolic-n-body-tb.sv line 217
-run
-run
+# ** Error: (vsim-3906) Connection type 'real$[0:2]' is incompatible with 'real' for  port (out_m_i):  Can't mix packed and unpacked types.
+#    Time: 0 ps  Iteration: 0  Instance: /acceleration_3D_tb/UUT/b_0_0 File: C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2.sv Line: 95
+# ** Error: (vsim-3906) Connection type 'real$[0:2]' is incompatible with 'real' for  port (out_m_j):  Can't mix packed and unpacked types.
+#    Time: 0 ps  Iteration: 0  Instance: /acceleration_3D_tb/UUT/b_0_0 File: C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2.sv Line: 95
+# ** Error: (vsim-3906) Connection type 'real$[0:2]' is incompatible with 'real' for  port (in_m_i):  Can't mix packed and unpacked types.
+#    Time: 0 ps  Iteration: 0  Instance: /acceleration_3D_tb/UUT/b_0_1 File: C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2.sv Line: 103
+# ** Error: (vsim-3906) Connection type 'real$[0:2]' is incompatible with 'real' for  port (out_m_j):  Can't mix packed and unpacked types.
+#    Time: 0 ps  Iteration: 0  Instance: /acceleration_3D_tb/UUT/b_0_1 File: C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2.sv Line: 103
+# ** Error: (vsim-3906) Connection type 'real$[0:2]' is incompatible with 'real' for  port (in_m_j):  Can't mix packed and unpacked types.
+#    Time: 0 ps  Iteration: 0  Instance: /acceleration_3D_tb/UUT/b_1_0 File: C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2.sv Line: 111
+# ** Error: (vsim-3906) Connection type 'real$[0:2]' is incompatible with 'real' for  port (out_m_i):  Can't mix packed and unpacked types.
+#    Time: 0 ps  Iteration: 0  Instance: /acceleration_3D_tb/UUT/b_1_0 File: C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2.sv Line: 111
+# ** Error: (vsim-3906) Connection type 'real$[0:2]' is incompatible with 'real' for  port (in_m_i):  Can't mix packed and unpacked types.
+#    Time: 0 ps  Iteration: 0  Instance: /acceleration_3D_tb/UUT/b_1_1 File: C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2.sv Line: 119
+# ** Error: (vsim-3906) Connection type 'real$[0:2]' is incompatible with 'real' for  port (in_m_j):  Can't mix packed and unpacked types.
+#    Time: 0 ps  Iteration: 0  Instance: /acceleration_3D_tb/UUT/b_1_1 File: C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2.sv Line: 119
+# Error loading design
+# End time: 13:23:26 on Jul 24,2020, Elapsed time: 0:00:02
+# Errors: 8, Warnings: 6
+vsim work.acceleration_3D_tb
+# vsim work.acceleration_3D_tb 
+# Start time: 13:23:42 on Jul 24,2020
+# Loading sv_std.std
+# Loading work.acceleration_3D_tb
+# Loading work.systolic_2x2_3D
+# Loading work.systolic_n_body_3D_cell
+# ** Error: (vsim-3906) Connection type 'real$[0:2]' is incompatible with 'real' for  port (out_m_i):  Can't mix packed and unpacked types.
+#    Time: 0 ps  Iteration: 0  Instance: /acceleration_3D_tb/UUT/b_0_0 File: C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2.sv Line: 95
+# ** Error: (vsim-3906) Connection type 'real$[0:2]' is incompatible with 'real' for  port (out_m_j):  Can't mix packed and unpacked types.
+#    Time: 0 ps  Iteration: 0  Instance: /acceleration_3D_tb/UUT/b_0_0 File: C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2.sv Line: 95
+# ** Error: (vsim-3906) Connection type 'real$[0:2]' is incompatible with 'real' for  port (in_m_i):  Can't mix packed and unpacked types.
+#    Time: 0 ps  Iteration: 0  Instance: /acceleration_3D_tb/UUT/b_0_1 File: C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2.sv Line: 103
+# ** Error: (vsim-3906) Connection type 'real$[0:2]' is incompatible with 'real' for  port (out_m_j):  Can't mix packed and unpacked types.
+#    Time: 0 ps  Iteration: 0  Instance: /acceleration_3D_tb/UUT/b_0_1 File: C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2.sv Line: 103
+# ** Error: (vsim-3906) Connection type 'real$[0:2]' is incompatible with 'real' for  port (in_m_j):  Can't mix packed and unpacked types.
+#    Time: 0 ps  Iteration: 0  Instance: /acceleration_3D_tb/UUT/b_1_0 File: C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2.sv Line: 111
+# ** Error: (vsim-3906) Connection type 'real$[0:2]' is incompatible with 'real' for  port (out_m_i):  Can't mix packed and unpacked types.
+#    Time: 0 ps  Iteration: 0  Instance: /acceleration_3D_tb/UUT/b_1_0 File: C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2.sv Line: 111
+# ** Error: (vsim-3906) Connection type 'real$[0:2]' is incompatible with 'real' for  port (in_m_i):  Can't mix packed and unpacked types.
+#    Time: 0 ps  Iteration: 0  Instance: /acceleration_3D_tb/UUT/b_1_1 File: C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2.sv Line: 119
+# ** Error: (vsim-3906) Connection type 'real$[0:2]' is incompatible with 'real' for  port (in_m_j):  Can't mix packed and unpacked types.
+#    Time: 0 ps  Iteration: 0  Instance: /acceleration_3D_tb/UUT/b_1_1 File: C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2.sv Line: 119
+# Error loading design
+# End time: 13:23:43 on Jul 24,2020, Elapsed time: 0:00:01
+# Errors: 8, Warnings: 2
+vsim work.acceleration_tb
+# vsim work.acceleration_tb 
+# Start time: 13:24:43 on Jul 24,2020
+# Loading sv_std.std
+# Loading work.acceleration_tb
+# Loading work.systolic_2x2
+# Loading work.systolic_n_body_3D_cell
+# ** Error: (vsim-3906) Connection type 'real' is incompatible with 'real$[0:2]' for  port (q_0i):  Can't mix packed and unpacked types.
+#    Time: 0 ps  Iteration: 0  Instance: /acceleration_tb/UUT File: C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv Line: 148
+# ** Error: (vsim-3906) Connection type 'real' is incompatible with 'real$[0:2]' for  port (q_0j):  Can't mix packed and unpacked types.
+#    Time: 0 ps  Iteration: 0  Instance: /acceleration_tb/UUT File: C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv Line: 148
+# ** Error: (vsim-3906) Connection type 'real' is incompatible with 'real$[0:2]' for  port (q_1i):  Can't mix packed and unpacked types.
+#    Time: 0 ps  Iteration: 0  Instance: /acceleration_tb/UUT File: C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv Line: 148
+# ** Error: (vsim-3906) Connection type 'real' is incompatible with 'real$[0:2]' for  port (q_1j):  Can't mix packed and unpacked types.
+#    Time: 0 ps  Iteration: 0  Instance: /acceleration_tb/UUT File: C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv Line: 148
+# ** Error: (vsim-3906) Connection type 'real' is incompatible with 'real$[0:2]' for  port (pd_0):  Can't mix packed and unpacked types.
+#    Time: 0 ps  Iteration: 0  Instance: /acceleration_tb/UUT File: C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv Line: 148
+# ** Error: (vsim-3906) Connection type 'real' is incompatible with 'real$[0:2]' for  port (pd_1):  Can't mix packed and unpacked types.
+#    Time: 0 ps  Iteration: 0  Instance: /acceleration_tb/UUT File: C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv Line: 148
+# ** Error: (vsim-3906) Connection type 'real' is incompatible with 'real$[0:2]' for  port (pr_0):  Can't mix packed and unpacked types.
+#    Time: 0 ps  Iteration: 0  Instance: /acceleration_tb/UUT File: C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv Line: 148
+# ** Error: (vsim-3906) Connection type 'real' is incompatible with 'real$[0:2]' for  port (pr_1):  Can't mix packed and unpacked types.
+#    Time: 0 ps  Iteration: 0  Instance: /acceleration_tb/UUT File: C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv Line: 148
+# ** Error: (vsim-3906) Connection type 'real' is incompatible with 'real$[0:2]' for  port (out_pd_0):  Can't mix packed and unpacked types.
+#    Time: 0 ps  Iteration: 0  Instance: /acceleration_tb/UUT File: C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv Line: 148
+# ** Error: (vsim-3906) Connection type 'real' is incompatible with 'real$[0:2]' for  port (out_pd_1):  Can't mix packed and unpacked types.
+#    Time: 0 ps  Iteration: 0  Instance: /acceleration_tb/UUT File: C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv Line: 148
+# ** Error: (vsim-3906) Connection type 'real' is incompatible with 'real$[0:2]' for  port (out_pr_0):  Can't mix packed and unpacked types.
+#    Time: 0 ps  Iteration: 0  Instance: /acceleration_tb/UUT File: C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv Line: 148
+# ** Error: (vsim-3906) Connection type 'real' is incompatible with 'real$[0:2]' for  port (out_pr_1):  Can't mix packed and unpacked types.
+#    Time: 0 ps  Iteration: 0  Instance: /acceleration_tb/UUT File: C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv Line: 148
+# Error loading design
+# End time: 13:24:44 on Jul 24,2020, Elapsed time: 0:00:01
+# Errors: 12, Warnings: 1
+vsim work.acceleration_time_tb
+# vsim work.acceleration_time_tb 
+# Start time: 13:24:49 on Jul 24,2020
+# Loading sv_std.std
+# Loading work.acceleration_time_tb
+# Loading work.systolic_2x2
+# Loading work.systolic_n_body_3D_cell
+# ** Error: (vsim-3906) Connection type 'real' is incompatible with 'real$[0:2]' for  port (q_0i):  Can't mix packed and unpacked types.
+#    Time: 0 ps  Iteration: 0  Instance: /acceleration_time_tb/UUT File: C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv Line: 279
+# ** Error: (vsim-3906) Connection type 'real' is incompatible with 'real$[0:2]' for  port (q_0j):  Can't mix packed and unpacked types.
+#    Time: 0 ps  Iteration: 0  Instance: /acceleration_time_tb/UUT File: C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv Line: 279
+# ** Error: (vsim-3906) Connection type 'real' is incompatible with 'real$[0:2]' for  port (q_1i):  Can't mix packed and unpacked types.
+#    Time: 0 ps  Iteration: 0  Instance: /acceleration_time_tb/UUT File: C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv Line: 279
+# ** Error: (vsim-3906) Connection type 'real' is incompatible with 'real$[0:2]' for  port (q_1j):  Can't mix packed and unpacked types.
+#    Time: 0 ps  Iteration: 0  Instance: /acceleration_time_tb/UUT File: C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv Line: 279
+# ** Error: (vsim-3906) Connection type 'real' is incompatible with 'real$[0:2]' for  port (pd_0):  Can't mix packed and unpacked types.
+#    Time: 0 ps  Iteration: 0  Instance: /acceleration_time_tb/UUT File: C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv Line: 279
+# ** Error: (vsim-3906) Connection type 'real' is incompatible with 'real$[0:2]' for  port (pd_1):  Can't mix packed and unpacked types.
+#    Time: 0 ps  Iteration: 0  Instance: /acceleration_time_tb/UUT File: C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv Line: 279
+# ** Error: (vsim-3906) Connection type 'real' is incompatible with 'real$[0:2]' for  port (pr_0):  Can't mix packed and unpacked types.
+#    Time: 0 ps  Iteration: 0  Instance: /acceleration_time_tb/UUT File: C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv Line: 279
+# ** Error: (vsim-3906) Connection type 'real' is incompatible with 'real$[0:2]' for  port (pr_1):  Can't mix packed and unpacked types.
+#    Time: 0 ps  Iteration: 0  Instance: /acceleration_time_tb/UUT File: C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv Line: 279
+# ** Error: (vsim-3906) Connection type 'real' is incompatible with 'real$[0:2]' for  port (out_pd_0):  Can't mix packed and unpacked types.
+#    Time: 0 ps  Iteration: 0  Instance: /acceleration_time_tb/UUT File: C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv Line: 279
+# ** Error: (vsim-3906) Connection type 'real' is incompatible with 'real$[0:2]' for  port (out_pd_1):  Can't mix packed and unpacked types.
+#    Time: 0 ps  Iteration: 0  Instance: /acceleration_time_tb/UUT File: C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv Line: 279
+# ** Error: (vsim-3906) Connection type 'real' is incompatible with 'real$[0:2]' for  port (out_pr_0):  Can't mix packed and unpacked types.
+#    Time: 0 ps  Iteration: 0  Instance: /acceleration_time_tb/UUT File: C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv Line: 279
+# ** Error: (vsim-3906) Connection type 'real' is incompatible with 'real$[0:2]' for  port (out_pr_1):  Can't mix packed and unpacked types.
+#    Time: 0 ps  Iteration: 0  Instance: /acceleration_time_tb/UUT File: C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv Line: 279
+# Error loading design
+# End time: 13:24:50 on Jul 24,2020, Elapsed time: 0:00:01
+# Errors: 12, Warnings: 1
+vsim work.cell_tb
+# vsim work.cell_tb 
+# Start time: 13:24:53 on Jul 24,2020
+# Loading sv_std.std
+# Loading work.cell_tb
+# Loading work.systolic_n_body_2x2_cell
 quit -sim
-# End time: 11:38:50 on Jun 10,2020, Elapsed time: 0:01:09
-# Errors: 0, Warnings: 3
+# End time: 13:25:10 on Jul 24,2020, Elapsed time: 0:00:17
+# Errors: 0, Warnings: 1

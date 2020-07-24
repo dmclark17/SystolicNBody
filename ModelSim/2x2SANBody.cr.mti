@@ -1,4 +1,13 @@
-C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv {1 {vlog -work work -sv -stats=none C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv
+C:/Users/Liam/Documents/SystolicNBody/ModelSim/NxN-systolic-n-body-tb.sv {1 {vlog -work work -sv -stats=none C:/Users/Liam/Documents/SystolicNBody/ModelSim/NxN-systolic-n-body-tb.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module NxN_cell_tb
+-- Compiling module acceleration_3D_tb
+
+Top level modules:
+	NxN_cell_tb
+	acceleration_3D_tb
+
+} {} {}} C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv {1 {vlog -work work -sv -stats=none C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module verlet_tb
 -- Compiling module cell_tb
@@ -13,14 +22,6 @@ Top level modules:
 	acceleration_time_tb
 	acceleration_block_tb
 
-} {} {}} C:/Users/Liam/Documents/SystolicNBody/ModelSim/NxN-systolic-n-body.sv {1 {vlog -work work -sv -stats=none C:/Users/Liam/Documents/SystolicNBody/ModelSim/NxN-systolic-n-body.sv
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module systolic_n_body_3D_cell
--- Compiling module systolic_2x2_3D
-
-Top level modules:
-	systolic_2x2_3D
-
 } {} {}} C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body.sv {1 {vlog -work work -sv -stats=none C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module systolic_n_body_2x2_cell
@@ -32,5 +33,13 @@ Top level modules:
 	systolic_n_body_2x2_integration
 	systolic_2x2
 	systolic_4_body_2x2
+
+} {} {}} C:/Users/Liam/Documents/SystolicNBody/ModelSim/NxN-systolic-n-body.sv {1 {vlog -work work -sv -stats=none C:/Users/Liam/Documents/SystolicNBody/ModelSim/NxN-systolic-n-body.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module systolic_n_body_3D_cell
+-- Compiling module systolic_2x2_3D
+
+Top level modules:
+	systolic_2x2_3D
 
 } {} {}}
