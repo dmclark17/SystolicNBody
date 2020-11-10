@@ -229,18 +229,18 @@ def generate_testbench_code(N, n):
              'real out_p_right[3];\n'
              'real out_p_down[3];\n\n'
              'systolic_n_body_3D_cell UUT(.clk(clk),\n'
-                            .in_q_i(in_q_i),\n'
-			    .in_q_j(in_q_j),\n'
-                            .in_m_i(in_m_i),\n'
-			    .in_m_j(in_m_j),\n'
-                            .in_p_right(in_p_right),\n'
-			    .in_p_down(in_p_down),\n'
-                            .out_q_i(out_q_i),\n'
-			    .out_q_j(out_q_j),\n'
-                            .out_m_i(out_m_i),\n'
-			    .out_m_j(out_m_j),\n'
-			    .out_p_right(out_p_right),\n'
-			    .out_p_down(out_p_down));\n\n'
+             '                            .in_q_i(in_q_i),\n'
+             '                            .in_q_j(in_q_j),\n'
+             '                            .in_m_i(in_m_i),\n'
+             '                            .in_m_j(in_m_j),\n'
+             '                            .in_p_right(in_p_right),\n'
+             '                            .in_p_down(in_p_down),\n'
+             '                            .out_q_i(out_q_i),\n'
+             '                            .out_q_j(out_q_j),\n'
+             '                            .out_m_i(out_m_i),\n'
+             '                            .out_m_j(out_m_j),\n'
+             '                            .out_p_right(out_p_right),\n'
+             '                            .out_p_down(out_p_down));\n\n'
              '// Create a test\n'
              'initial begin\n\n'
              '  // Initialize the variables\n'
@@ -277,16 +277,16 @@ def generate_testbench_code(N, n):
     # add the code for the NxN acceleration with n bodies test
     code += ('// testbench for {0}x{0} acceleration with {1} bodies '
              '-- Confirmed\nmodule acceleration_3D_tb;\n\n'
-             .format(N, n)
+             .format(N, n))
 
     # add the variables used in the software
     s = '\n' + (' ' * len('real '))
     code += ('// Variables for the software side'
              '\nreal ' +
              s.join(['q_{}[3],'.format(i)
-                     for i in range(n)]) +
+                     for i in range(n)]) + s +
              s.join(['a_{}[3],'.format(i)
-                     for i in range(n)]) +
+                     for i in range(n)]) + s +
              s.join(['m_{},'.format(i)
                      for i in range(n)])[:-1] + ';')
 
@@ -296,32 +296,30 @@ def generate_testbench_code(N, n):
              '\nreg clk;'
              '\nreal ' +
              s.join(['Q_{0}i[3],'.format(i)
-                     for i in range(N)]) +
+                     for i in range(N)]) + s +
              s.join(['Q_{0}j[3],'.format(i)
-                     for i in range(N)]) +
+                     for i in range(N)]) + s +
              s.join(['M_{0}i,'.format(i)
-                     for i in range(N)]) +
+                     for i in range(N)]) + s +
              s.join(['M_{0}j,'.format(i)
-                     for i in range(N)]) +
+                     for i in range(N)]) + s +
              s.join(['PR_{0}[3],'.format(i)
-                     for i in range(N)]) +
+                     for i in range(N)]) + s +
              s.join(['PD_{0}[3],'.format(i)
-                     for i in range(N)]) +
+                     for i in range(N)]) + s +
              s.join(['OPR_{0}[3],'.format(i)
-                     for i in range(N)]) +
+                     for i in range(N)]) + s +
              s.join(['OPD_{0}[3],'.format(i)
                      for i in range(N)])[:-1] + ';')
 
     # create the UUT
     s = '\n' + (' ' * len('systolic_{0}x{0}_3D UUT('.format(N)))
     code += ('\n\nsystolic_{0}x{0}_3D UUT(.clk(clk),'.format(N) + s +
-             s.join(['.q_{0}i(Q_{0}i),'.format(i)  # input row pos
+             s.join(['.q_{0}i(Q_{0}i),'.format(i) + s +  # input row pos
+                     '.q_{0}j(Q_{0}j),'.format(i)  # input col pos
                      for i in range(N)]) + s +
-             s.join(['.q_{0}j(Q_{0}j),'.format(i)  # input col pos
-                     for i in range(N)]) + s +
-             s.join(['.m_{0}i(M_{0}i),'.format(i)  # input row mass
-                     for i in range(N)]) + s +
-             s.join(['.m_{0}j(M_{0}j),'.format(i)  # input col mass
+             s.join(['.m_{0}i(M_{0}i),'.format(i) + s +  # input row mass
+                     '.m_{0}j(M_{0}j),'.format(i)  # input col mass
                      for i in range(N)]) + s +
              s.join(['.pd_{0}(PD_{0}),'.format(i)  # input down acc
                      for i in range(N)]) + s +
@@ -334,40 +332,40 @@ def generate_testbench_code(N, n):
 
     # initialize the variables
     s = '\n' + (' ' * 2)
-    code = ('\ninitial begin\n' + s + 'clk = 0;' + s +
-            s.join(['q_{0}[0] = {1}; q_{0}[1] = {2}; q_{0}[2] = {3};'
-                    .format(i, 0, 0, 0)  # TODO put in initial positions
-                    for i in range(n)]) + s +
-            s.join(['a_{0}[0] = {1}; a_{0}[1] = {2}; a_{0}[2] = {3};'
-                    .format(i, 0, 0, 0)  # TODO put in initial accelerations
-                    for i in range(n)]) + s +
-            s.join(['m_{0} = {1};'
-                    .format(i, 1)  # TODO put in masses
-                    for i in range(n)]) + '\n' + s +
-            s.join(['Q_{0}i[0] = 0; Q_{0}i[1] = 0; Q_{0}i[2] = 0;'
-                    .format(i)
-                    for i in range(N)]) + s +
-            s.join(['Q_{0}j[0] = 0; Q_{0}j[1] = 0; Q_{0}j[2] = 0;'
-                    .format(i)
-                    for i in range(N)]) + s +
-            s.join(['M_{0}i = 0;'
-                    .format(i)
-                    for i in range(N)]) + s +
-            s.join(['M_{0}j = 0;'
-                    .format(i)
-                    for i in range(N)]) + s +
-            s.join(['PD_{0}[0] = 0; PD_{0}[1] = 0; PD_{0}[2] = 0;'
-                    .format(i)
-                    for i in range(N)]) + s +
-            s.join(['PR_{0}[0] = 0; PR_{0}[1] = 0; PR_{0}[2] = 0;'
-                    .format(i)
-                    for i in range(N)]) + s +
-            s.join(['OPD_{0}[0] = 0; OPD_{0}[1] = 0; OPD_{0}[2] = 0;'
-                    .format(i)
-                    for i in range(N)]) + s +
-            s.join(['OPR_{0}[0] = 0; OPR_{0}[1] = 0; OPR_{0}[2] = 0;'
-                    .format(i)
-                    for i in range(N)]))
+    code += ('\ninitial begin\n' + s + 'clk = 0;' + s +
+             s.join(['q_{0}[0] = {1}; q_{0}[1] = {2}; q_{0}[2] = {3};'
+                     .format(i, 0, 0, 0)  # TODO put in initial positions
+                     for i in range(n)]) + s +
+             s.join(['a_{0}[0] = {1}; a_{0}[1] = {2}; a_{0}[2] = {3};'
+                     .format(i, 0, 0, 0)  # TODO put in initial accelerations
+                     for i in range(n)]) + s +
+             s.join(['m_{0} = {1};'
+                     .format(i, 1)  # TODO put in masses
+                     for i in range(n)]) + '\n' + s +
+             s.join(['Q_{0}i[0] = 0; Q_{0}i[1] = 0; Q_{0}i[2] = 0;'
+                     .format(i)
+                     for i in range(N)]) + s +
+             s.join(['Q_{0}j[0] = 0; Q_{0}j[1] = 0; Q_{0}j[2] = 0;'
+                     .format(i)
+                     for i in range(N)]) + s +
+             s.join(['M_{0}i = 0;'
+                     .format(i)
+                     for i in range(N)]) + s +
+             s.join(['M_{0}j = 0;'
+                     .format(i)
+                     for i in range(N)]) + s +
+             s.join(['PD_{0}[0] = 0; PD_{0}[1] = 0; PD_{0}[2] = 0;'
+                     .format(i)
+                     for i in range(N)]) + s +
+             s.join(['PR_{0}[0] = 0; PR_{0}[1] = 0; PR_{0}[2] = 0;'
+                     .format(i)
+                     for i in range(N)]) + s +
+             s.join(['OPD_{0}[0] = 0; OPD_{0}[1] = 0; OPD_{0}[2] = 0;'
+                     .format(i)
+                     for i in range(N)]) + s +
+             s.join(['OPR_{0}[0] = 0; OPR_{0}[1] = 0; OPR_{0}[2] = 0;'
+                     .format(i)
+                     for i in range(N)]))
 
     # Now compute the timesteps block-by-block
     # To generate the code, we take note that for block i, j
@@ -377,19 +375,149 @@ def generate_testbench_code(N, n):
     #           M_{u}i = m_{u + i * N}
     #           M_{v}j = m_{v + j * N}
     #           and zero in the other terms when applicable
+    # This gives the entire computation order when feeding in, since
+    # we feed along each row across the diagonal.
     #
     # And then for the accumulations at the end of the blocks that
     #   are off the diagonal (which output N steps after input):
     #           a_{u + i * N} += OPR_{u}
     #           a_{v + j * N} += OPD_{v}
+    #
+    # Finally, we also add in the #10; command to flip the clk.
+
+    def _generate_inputs(t):
+        """sets the inputs for each t, starting at 0 and less than
+        N * b * (b + 1) / 2 + 3 * N - 1).
+        """
+        # TODO diagonals
+        def _generate_row_input(i, j, u):
+            if i == N or i == -1:
+                return (' '.join(['Q_{0}i[{1}] = 0;'
+                                  .format(u, k)
+                                  for k in range(3)]) +
+                        'M_{0}i = 0;'.format(u))
+            else:
+                return ('Q_{0}i = q_{1}; M_{0}i = m_{1};'
+                        .format(u, u + i * N))
+
+        def _generate_col_input(i, j, v):
+            if j == N or j == -1:
+                return (' '.join(['Q_{0}j[{1}] = 0;'
+                                  .format(v, k)
+                                  for k in range(3)]) +
+                        'M_{0}j = 0;'.format(v))
+            else:
+                return ('Q_{0}j = q_{1}; M_{0}j = m_{1};'
+                        .format(v, v + j * N)) 
+
+        # first compute which block t is in
+        curr_block = int(t / N)
+        into_next_block = t - curr_block
+
+        # go up to n for in matrix (N * b * (b + 1) / 2 + 2 * N - 1 max)
+        # then check after if in 0 phase
+        comp_blocks = 0
+        curr_i = -1
+        for i in range(0, n):
+            if comp_blocks < curr_block:
+                comp_blocks += n - i
+                curr_i += 1
+            else:
+                break
+
+        # exit if we're after the feed in stage.
+        if comp_blocks < curr_block:
+            return ''
+
+        curr_j = curr_block - int(curr_i * (curr_i + 1) / 2)
+ 
+        into_i = curr_i if curr_j + 1 < N else curr_i + 1
+        into_j = curr_j + 1 if curr_j + 1 < N else curr_i + 1
+
+        # the first into_next_block inputs will be from into_i, into_j
+        s = '\n  '
+        inputs = s + s.join([_generate_row_input(into_i, into_j, k) + s +
+                             _generate_col_input(into_i, into_j, k)
+                             for k in range(into_next_block)])
+
+        # the rest of them belong to curr_block
+        inputs += s + s.join([_generate_row_input(curr_i, curr_j, k) + s +
+                              _generate_col_input(curr_i, curr_j, k)
+                              for k in range(into_next_block, N, 1)])
+        return inputs
+
+    def _generate_outputs(t):
+        """increments from the outputs for each t (which should be in between
+        0 and N * b * (b + 1) / 2 + 3 * N - 1).
+        """
+        def _increment_a_opr(i, u):
+            """produce the a_{u + i * N} incremention above.
+            """
+            return ' '.join(['a_{0}[{1}] = a_{0}[{1}] + OPR_{2}[{1}];'
+                             .format(i * N + u, k, u)
+                             for k in range(3)])
+
+        def _increment_a_opd(j, v):
+            """produce the a_{v + j * N} incremention above.
+            """
+            return ' '.join(['a_{0}[{1}] = a_{0}[{1}] + OPR_{2}[{1}];'
+                             .format(j * N + v, k, v)
+                             for k in range(3)])
+
+        if t < N:
+            return ''
+
+        # first compute which block t outputs are corresponding to
+        curr_block = int(t / N) - 1
+        into_next_block = t - N - curr_block
+
+        comp_blocks = 0
+        curr_i = -1
+        for i in range(0, n):
+            if comp_blocks < curr_block:
+                comp_blocks += n - i
+                curr_i += 1
+            else:
+                break
+
+        curr_j = curr_block - int(curr_i * (curr_i + 1) / 2)
+ 
+        last_i = curr_i if curr_j - 1 > curr_i else curr_i - 1
+        last_j = curr_j - 1 if curr_j - 1 > curr_i else N - 1
+
+        # the first into_next_block inputs will be from last_i, last_j
+        s = '\n  '
+        outputs = s + s.join([_increment_a_opr(last_i, k) + s +
+                              _increment_a_opd(last_j, k)
+                              for k in range(into_next_block)])
+
+        # the rest of them belong to curr_i, curr_j
+        outputs += s + s.join([_increment_a_opr(curr_i, k) + s +
+                               _increment_a_opd(curr_j, k)
+                               for k in range(into_next_block, N, 1)])
+
+        return outputs
+
+    s = '\n  '
+    b = int(n / N)
+
+    # Compute only a single cycle - this loop just feeds in until 0
+    for t in range(int(N * b * (b + 1) / 2 + 2 * N - 1)):
+        code += ('\n' + s + '//// compute step {}'.format(t) +
+                 s + '#10; $stop;' +
+                 _generate_inputs(t) + '\n' + s +
+                 '// increment outputs' +
+                 _generate_outputs(t))
 
     # end the code for the NxN acceleration with n bodies test
-    code += ('end\n\n'
+    code += ('\n\nend\n\n'
              '// always have clk taking care of sync across cells\n'
              'initial begin\n'
              '  forever #5 clk = ~clk;]\n'
              'end\n\n'
              'endmodule')
+
+    return code
 
 
 def main():

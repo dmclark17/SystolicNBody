@@ -79,16 +79,33 @@ module systolic_2x2_3D(input wire clk,
                        output real out_pr_0[3],
                        output real out_pr_1[3]);
 
+  // The accumulation across to the right wires (i, j)
+
   real pr_0_0[3],
        pr_1_0[3];
+
+  // The accumulation downwards wires (i, j)
+
   real pd_0_0[3],
        pd_0_1[3];
+
+  // The position passing wires to the right out of (i, j)
+
   real q_0_0_i[3],
        q_1_0_i[3];
+
+  // The position passing wires downwards out of (i, j)
+
   real q_0_0_j[3],
        q_0_1_j[3];
+
+  // The mass passing wires to the right out of (i, j)
+
   real m_0_0_i[3],
        m_1_0_i[3];
+
+  // The mass passing wires downwards out of (i, j)
+
   real m_0_0_j[3],
        m_0_1_j[3];
 
