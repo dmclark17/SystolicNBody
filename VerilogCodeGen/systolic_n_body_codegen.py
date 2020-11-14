@@ -535,30 +535,38 @@ def generate_testbench_code(N, n):
         """
         b = int(n / N)
 
-        def _increment_a_opr(i, u):
+        def _increment_a_opr(i, j, u):
             """produce the a_{u + i * N} incremention above.
             """
-            return ' '.join(['a_{0}[{1}] = a_{0}[{1}] + OPR_{2}[{1}];'
-                             .format(i * N + u, k, u)
-                             for k in range(3)])
+            if i < b and j < b:
+                return ' '.join(['a_{0}[{1}] = a_{0}[{1}] + OPR_{2}[{1}];'
+                                 .format(i * N + u, k, u)
+                                 for k in range(3)])
+            else:
+                return ''
 
-        def _increment_a_opd(j, v):
+        def _increment_a_opd(i, j, v):
             """produce the a_{v + j * N} incremention above.
             """
-            return ' '.join(['a_{0}[{1}] = a_{0}[{1}] + OPR_{2}[{1}];'
-                             .format(j * N + v, k, v)
-                             for k in range(3)])
+            if i + 1 == j:
+                return ' '.join(['a_{0}[{1}] = a_{0}[{1}] + OPD_{2}[{1}];'
+                                 .format((i + 1) * N + v, k, v)
+                                 for k in range(3)])
+            else:
+                return ''
 
         if t < N:
             return ''
 
-        # first compute which block t outputs are corresponding to
-        # Note that each block has explicitly inputs only N times.
-        # But after each one, then the next starts
-        # but after the first N then the next into starts.
-        curr_block = int(t / N) - 1
-        into_next_block = t - N - curr_block * N
+        # We compute in the same order as inputs, but just wait an extra N
+        #   to get the appropriate outputs.
+        curr_block = max(0,
+                         int((t - 2 * N + 1) / N))
+        time_in_curr = t - N - curr_block * N
+        into_next_block = max(0, time_in_curr - N + 1)
 
+        # go up to n for in matrix (N * b * (b + 1) / 2)
+        # then check after if in 0 phase
         comp_blocks = 0
         curr_i = -1
         for i in range(0, b):
@@ -570,23 +578,25 @@ def generate_testbench_code(N, n):
 
         curr_j = curr_block - int(curr_i * (curr_i + 1) / 2)
  
-        last_i = curr_i if curr_j - 1 > curr_i else curr_i - 1
-        last_j = curr_j - 1 if curr_j - 1 > curr_i else b - 1
+        into_i = (curr_i if curr_j + 1 < b and curr_i >= 0
+                  else curr_i + 1)
+        into_j = (curr_j + 1 if curr_j + 1 < b and curr_i >= 0
+                  else curr_i + 1)
 
-        print('\n\tgen:[ t: {}, curr_block: {}, into_next_block: {},\n'
-              '\t        curr_i: {}, curr_j: {}, last_i: {}, last_j: {} ]'
+        print('\n\toutput:[ t: {}, curr_block: {}, into_next_block: {},\n'
+              '\t           curr_i: {}, curr_j: {}, into_i: {}, into_j: {} ]'
               .format(t, curr_block, into_next_block,
-                      curr_i, curr_j, last_i, last_j))
+                      curr_i, curr_j, into_i, into_j))
 
         # the first into_next_block inputs will be from last_i, last_j
         s = '\n  '
-        outputs = s + s.join([_increment_a_opr(last_i, k) + s +
-                              _increment_a_opd(last_j, k)
+        outputs = s + s.join([_increment_a_opr(into_i, into_j, k) + s +
+                              _increment_a_opd(into_i, into_j, k)
                               for k in range(into_next_block)])
 
         # the rest of them belong to curr_i, curr_j
-        outputs += s + s.join([_increment_a_opr(curr_i, k) + s +
-                               _increment_a_opd(curr_j, k)
+        outputs += s + s.join([_increment_a_opr(curr_i, curr_j, k) + s +
+                               _increment_a_opd(curr_i, curr_j, k)
                                for k in range(into_next_block, N, 1)])
 
         return outputs
