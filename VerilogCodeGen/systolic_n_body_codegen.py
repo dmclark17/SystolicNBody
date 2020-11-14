@@ -384,72 +384,157 @@ def generate_testbench_code(N, n):
     #           a_{v + j * N} += OPD_{v}
     #
     # Finally, we also add in the #10; command to flip the clk.
+    # Example on 2x2 with 4 bodies
+    #    Blocks:    | 0,0  0,1 | 0,2  0,3 |
+    #               | -,-  1,1 | 1,2  1,3 |
+    #                          ------------
+    #                          | 2,2  2,3 |
+    #                          | -,-  3,3 |
+    #
+    #    Block order i: 0- | 01 | 21 | -3 |
+    #                j: 0- | 21 | 23 | -3 |
+    #
+    # From block: 00,00 | 00,00 | 01,00 | 01,01 | 11,01 | 11,11 | --,11 |
+    #       curr:   00  |   00  |   00  |   01  |   01  |   11  |   11  |
+    #       into:    -  |    -  |   01  |    -  |   11  |    -  |    -  |
+    #          t:  0    | 1     | 2     | 3     | 4     | 5     | 6     |
+    #   Each block has inputs for 0..<2N - 1 steps. N for each index, staggered
+    #       by each indice going down. These are overlapping with the previous
+    #       block for N - 1 timesteps, so there are N timesteps left and N - 1
+    #       of which will be used by the next, so 1 step where it is the only
+    #       block doing processing.
+    #   So the first starts at 0, 1 into after N and then curr after 2N - 1.
+    #     Then 2N - 1 + N finishes, so at 2N then 2 is into so curr at 3N - 1.
+    #   into doesn't start until after the first N is completed.
+    #   step for u/v is max(time in block - u/v, 0)
+    #
+    # BEGIN OLD
+    # so we get 0,0  -,-
+    #           -,-  -,-
+    #
+    #           0,2  0,1
+    #           1,0  -,-
+    #
+    #           2,2  0,3  a0 += 0,0 + 0,1
+    #           1,2  1,1
+    #
+    #           -,-  2,3  a0 += 1,0 + 1,1
+    #           3,2  1,3  
+    #
+    #           -,-  -,-
+    #           -,-  3,3
+    #
 
     def _generate_inputs(t):
         """sets the inputs for each t, starting at 0 and less than
         N * b * (b + 1) / 2 + 3 * N - 1).
         """
         # TODO diagonals
-        def _generate_row_input(i, j, u):
-            if i == N or i == -1:
-                return (' '.join(['Q_{0}i[{1}] = 0;'
+        b = int(n / N)
+
+        def _generate_row_input(i, j, u, step):
+            if i == j and i != b:
+                if step >= 0:
+                    return ('Q_{0}i = q_{1}; M_{0}i = m_{1};'
+                            .format(u, u + i * N))
+                else:
+                    return (' '.join(['Q_{0}i[1] = 0;'
+                                      .format(u, k)
+                                      for k in range(3)]) +
+                            ' M_{0}i = 0;'.format(u))
+            elif i == b or j == b:
+                return (' '.join(['Q_{0}i[1] = 0;'
                                   .format(u, k)
                                   for k in range(3)]) +
-                        'M_{0}i = 0;'.format(u))
+                        ' M_{0}i = 0;'.format(u))
             else:
                 return ('Q_{0}i = q_{1}; M_{0}i = m_{1};'
                         .format(u, u + i * N))
 
-        def _generate_col_input(i, j, v):
-            if j == N or j == -1:
-                return (' '.join(['Q_{0}j[{1}] = 0;'
+        def _generate_col_input(i, j, v, step):
+            if i == j and i != b:
+                if step >= 0:
+                    return ('Q_{0}j = q_{1}; M_{0}j = m_{1};'
+                            .format(v, v + j * N))
+                else:
+                    return (' '.join(['Q_{0}j[1] = 0;'
+                                      .format(v, k)
+                                      for k in range(3)]) +
+                            ' M_{0}j = 0;'.format(v))
+            elif i == b or j == b:  # in future
+                return (' '.join(['Q_{0}j[1] = 0;'
                                   .format(v, k)
                                   for k in range(3)]) +
-                        'M_{0}j = 0;'.format(v))
+                        ' M_{0}j = 0;'.format(v))
             else:
                 return ('Q_{0}j = q_{1}; M_{0}j = m_{1};'
-                        .format(v, v + j * N)) 
+                        .format(v, v + j * N))
 
-        # first compute which block t is in
-        curr_block = int(t / N)
-        into_next_block = t - curr_block
+        # first compute which block t is predominantly calculating in
+        # note odd offset for first on first timestep
+        curr_block = max(0,
+                         int((t - N + 1) / N))
+        time_in_curr = t - curr_block * N  # between 0..<2N-1 for first
+                                           # otherwise N-1..<2N-1
+        into_next_block = max(0, time_in_curr - N + 1)
 
-        # go up to n for in matrix (N * b * (b + 1) / 2 + 2 * N - 1 max)
+        # go up to n for in matrix (N * b * (b + 1) / 2)
         # then check after if in 0 phase
         comp_blocks = 0
         curr_i = -1
-        for i in range(0, n):
-            if comp_blocks < curr_block:
-                comp_blocks += n - i
+        for i in range(0, b):
+            if comp_blocks <= curr_block:
+                comp_blocks += (b - i)
                 curr_i += 1
             else:
                 break
 
         # exit if we're after the feed in stage.
-        if comp_blocks < curr_block:
-            return ''
+        if comp_blocks <= curr_block:
+            s = '\n  '
+            inputs = s + (s.join([_generate_row_input(b, b,
+                                                      u, 0)
+                                  for u in range(N)]) + s +
+                          s.join([_generate_col_input(b, b,
+                                                      v, 0)
+                                  for v in range(N)]))
+            return inputs
 
         curr_j = curr_block - int(curr_i * (curr_i + 1) / 2)
  
-        into_i = curr_i if curr_j + 1 < N else curr_i + 1
-        into_j = curr_j + 1 if curr_j + 1 < N else curr_i + 1
+        into_i = (curr_i if curr_j + 1 < b and curr_i >= 0
+                  else curr_i + 1)
+        into_j = (curr_j + 1 if curr_j + 1 < b and curr_i >= 0
+                  else curr_i + 1)
+
+        print('\n\tinput:[ t: {}, curr_block: {}, into_next_block: {},\n'
+              '\t          curr_i: {}, curr_j: {}, into_i: {}, into_j: {} ]'
+              .format(t, curr_block, into_next_block,
+                      curr_i, curr_j, into_i, into_j))
 
         # the first into_next_block inputs will be from into_i, into_j
         s = '\n  '
-        inputs = s + s.join([_generate_row_input(into_i, into_j, k) + s +
-                             _generate_col_input(into_i, into_j, k)
-                             for k in range(into_next_block)])
-
-        # the rest of them belong to curr_block
-        inputs += s + s.join([_generate_row_input(curr_i, curr_j, k) + s +
-                              _generate_col_input(curr_i, curr_j, k)
-                              for k in range(into_next_block, N, 1)])
+        inputs = s + (s.join([_generate_row_input(into_i, into_j,
+                                                  u, into_next_block - u)
+                              for u in range(into_next_block)]) + s +
+                      s.join([_generate_row_input(curr_i, curr_j,
+                                                  u, time_in_curr - u)
+                              for u in range(into_next_block, N, 1)]) +
+                      ('\n' if into_next_block == N - 1 else '') + s +
+                      s.join([_generate_col_input(into_i, into_j,
+                                                  v, into_next_block - v)
+                              for v in range(into_next_block)]) + s +
+                      s.join([_generate_col_input(curr_i, curr_j,
+                                                  v, time_in_curr - v)
+                              for v in range(into_next_block, N, 1)]))
         return inputs
 
     def _generate_outputs(t):
         """increments from the outputs for each t (which should be in between
         0 and N * b * (b + 1) / 2 + 3 * N - 1).
         """
+        b = int(n / N)
+
         def _increment_a_opr(i, u):
             """produce the a_{u + i * N} incremention above.
             """
@@ -468,14 +553,17 @@ def generate_testbench_code(N, n):
             return ''
 
         # first compute which block t outputs are corresponding to
+        # Note that each block has explicitly inputs only N times.
+        # But after each one, then the next starts
+        # but after the first N then the next into starts.
         curr_block = int(t / N) - 1
-        into_next_block = t - N - curr_block
+        into_next_block = t - N - curr_block * N
 
         comp_blocks = 0
         curr_i = -1
-        for i in range(0, n):
-            if comp_blocks < curr_block:
-                comp_blocks += n - i
+        for i in range(0, b):
+            if comp_blocks <= curr_block:
+                comp_blocks += (b - i)
                 curr_i += 1
             else:
                 break
@@ -483,7 +571,12 @@ def generate_testbench_code(N, n):
         curr_j = curr_block - int(curr_i * (curr_i + 1) / 2)
  
         last_i = curr_i if curr_j - 1 > curr_i else curr_i - 1
-        last_j = curr_j - 1 if curr_j - 1 > curr_i else N - 1
+        last_j = curr_j - 1 if curr_j - 1 > curr_i else b - 1
+
+        print('\n\tgen:[ t: {}, curr_block: {}, into_next_block: {},\n'
+              '\t        curr_i: {}, curr_j: {}, last_i: {}, last_j: {} ]'
+              .format(t, curr_block, into_next_block,
+                      curr_i, curr_j, last_i, last_j))
 
         # the first into_next_block inputs will be from last_i, last_j
         s = '\n  '
@@ -501,8 +594,9 @@ def generate_testbench_code(N, n):
     s = '\n  '
     b = int(n / N)
 
-    # Compute only a single cycle - this loop just feeds in until 0
-    for t in range(int(N * b * (b + 1) / 2 + 2 * N - 1)):
+    # Compute only a single cycle - this loop just feeds in N inputs for each
+    # block and then an extra N steps for the output to propagate.
+    for t in range(2 * N - 1 + int(N * b * (b + 1) / 2)):
         code += ('\n' + s + '//// compute step {}'.format(t) +
                  s + '#10; $stop;' +
                  _generate_inputs(t) + '\n' + s +
