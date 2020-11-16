@@ -4,7 +4,7 @@
 
 
 // testbench for a single systolic cell -- Confirmed
-module NxN_cell_tb2;
+module NxN_cell_tb;
 
 reg clk;
 real in_q_i[3];
@@ -73,7 +73,7 @@ endmodule
 
 
 // testbench for 2x2 acceleration with 4 bodies -- Confirmed
-module acceleration_3D_tb2;
+module acceleration_3D_tb;
 
 // Variables for the software side
 real q_0[3],

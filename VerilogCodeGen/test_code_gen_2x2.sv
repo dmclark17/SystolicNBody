@@ -101,13 +101,13 @@ module systolic_2x2_3D(input wire clk,
 
   // The mass passing wires to the right out of (i, j)
 
-  real m_0_0_i[3],
-       m_1_0_i[3];
+  real m_0_0_i,
+       m_1_0_i;
 
   // The mass passing wires downwards out of (i, j)
 
-  real m_0_0_j[3],
-       m_0_1_j[3];
+  real m_0_0_j,
+       m_0_1_j;
 
   systolic_n_body_3D_cell b_0_0(.clk(clk),
                                 .in_q_i(q_0i), .in_q_j(q_0j),

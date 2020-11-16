@@ -166,20 +166,21 @@ initial begin
   // Block order i: 10, 12, 32, 04
   //             j: 10, 32, 34, 04
   // First block first inputs
-  #10; Q_0i = q_1; Q_0j = q_1;
-       Q_1i[0] = 0; Q_1i[1] = 0; Q_1i[2] = 0;
-       Q_1j[0] = 0; Q_1j[1] = 0; Q_1j[2] = 0;
-       M_0i = m_1; M_0j = m_1; M_1i = 0; M_1j = 0;
-  #10;
+  #10; // t = 0
+  Q_0i = q_1; Q_0j = q_1;
+  Q_1i[0] = 0; Q_1i[1] = 0; Q_1i[2] = 0;
+  Q_1j[0] = 0; Q_1j[1] = 0; Q_1j[2] = 0;
+  M_0i = m_1; M_0j = m_1; M_1i = 0; M_1j = 0;
+  #10; // t = 1
   Q_0i = q_1; Q_0j = q_3; Q_1i = q_2; Q_1j = q_2;
   M_0i = m_1; M_0j = m_3; M_1i = m_2; M_1j = m_2;
-  #10;
+  #10; // t = 2
   Q_0i = q_3; Q_0j = q_3; Q_1i = q_2; Q_1j = q_4;
   M_0i = m_3; M_0j = m_3; M_1i = m_2; M_1j = m_4;
   a_1[0] = a_1[0] + OPR_0[0];
   a_1[1] = a_1[1] + OPR_0[1];
   a_1[2] = a_1[2] + OPR_0[2];
-  #10;
+  #10; // t = 3
   Q_0i[0] = 0; Q_0i[1] = 0; Q_0i[2] = 0;
   Q_0j[0] = 0; Q_0j[1] = 0; Q_0j[2] = 0;
   Q_1i = q_4; Q_1j = q_4;
@@ -196,7 +197,7 @@ initial begin
   a_3[1] = a_3[1] + OPD_0[1];
   a_3[2] = a_3[2] + OPD_0[2];
   // reset inputs - We now have block 2 pr0, pd0 and block 1 pr1, pd1 outputs
-  #10; $stop;
+  #10; $stop; // t = 4
   Q_0i[0] = 0; Q_0i[1] = 0; Q_0i[2] = 0;
   Q_0j[0] = 0; Q_0j[1] = 0; Q_0j[2] = 0;
   Q_1i[0] = 0; Q_1i[1] = 0; Q_1i[2] = 0;
@@ -214,7 +215,7 @@ initial begin
   a_4[1] = a_4[1] + OPD_1[1];
   a_4[2] = a_4[2] + OPD_1[2];
   // finally get block 2 pr1, pd1 outputs
-  #10; $stop;
+  #10; $stop; // t = 5
   // a_4 is done
   a_4[0] = a_4[0] + OPR_1[0];
   a_4[1] = a_4[1] + OPR_1[1];

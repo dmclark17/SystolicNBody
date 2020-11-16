@@ -1,133 +1,420 @@
 # Compile of NxN-systolic-n-body-tb.sv was successful.
-# Compile of test_code_gen_2x2.sv failed with 4 errors.
-# Compile of test_code_gen_2x2.sv failed with 4 errors.
 # Compile of test_code_gen_2x2.sv was successful.
-vsim work.acceleration_3D_tb
-# vsim work.acceleration_3D_tb 
-# Start time: 13:23:24 on Jul 24,2020
+# Compile of test_code_gen_2x2_tb.sv failed with 1 errors.
+# Compile of test_code_gen_2x2_tb.sv was successful.
+vsim -gui work.acceleration_3D_tb
+# vsim -gui work.acceleration_3D_tb 
+# Start time: 09:30:37 on Nov 16,2020
 # Loading sv_std.std
 # Loading work.acceleration_3D_tb
 # Loading work.systolic_2x2_3D
 # Loading work.systolic_n_body_3D_cell
 # ** Error: (vsim-3906) Connection type 'real$[0:2]' is incompatible with 'real' for  port (out_m_i):  Can't mix packed and unpacked types.
-#    Time: 0 ps  Iteration: 0  Instance: /acceleration_3D_tb/UUT/b_0_0 File: C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2.sv Line: 95
+#    Time: 0 ps  Iteration: 0  Instance: /acceleration_3D_tb/UUT/b_0_0 File: C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2.sv Line: 112
 # ** Error: (vsim-3906) Connection type 'real$[0:2]' is incompatible with 'real' for  port (out_m_j):  Can't mix packed and unpacked types.
-#    Time: 0 ps  Iteration: 0  Instance: /acceleration_3D_tb/UUT/b_0_0 File: C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2.sv Line: 95
+#    Time: 0 ps  Iteration: 0  Instance: /acceleration_3D_tb/UUT/b_0_0 File: C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2.sv Line: 112
 # ** Error: (vsim-3906) Connection type 'real$[0:2]' is incompatible with 'real' for  port (in_m_i):  Can't mix packed and unpacked types.
-#    Time: 0 ps  Iteration: 0  Instance: /acceleration_3D_tb/UUT/b_0_1 File: C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2.sv Line: 103
+#    Time: 0 ps  Iteration: 0  Instance: /acceleration_3D_tb/UUT/b_0_1 File: C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2.sv Line: 120
 # ** Error: (vsim-3906) Connection type 'real$[0:2]' is incompatible with 'real' for  port (out_m_j):  Can't mix packed and unpacked types.
-#    Time: 0 ps  Iteration: 0  Instance: /acceleration_3D_tb/UUT/b_0_1 File: C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2.sv Line: 103
+#    Time: 0 ps  Iteration: 0  Instance: /acceleration_3D_tb/UUT/b_0_1 File: C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2.sv Line: 120
 # ** Error: (vsim-3906) Connection type 'real$[0:2]' is incompatible with 'real' for  port (in_m_j):  Can't mix packed and unpacked types.
-#    Time: 0 ps  Iteration: 0  Instance: /acceleration_3D_tb/UUT/b_1_0 File: C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2.sv Line: 111
+#    Time: 0 ps  Iteration: 0  Instance: /acceleration_3D_tb/UUT/b_1_0 File: C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2.sv Line: 128
 # ** Error: (vsim-3906) Connection type 'real$[0:2]' is incompatible with 'real' for  port (out_m_i):  Can't mix packed and unpacked types.
-#    Time: 0 ps  Iteration: 0  Instance: /acceleration_3D_tb/UUT/b_1_0 File: C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2.sv Line: 111
+#    Time: 0 ps  Iteration: 0  Instance: /acceleration_3D_tb/UUT/b_1_0 File: C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2.sv Line: 128
 # ** Error: (vsim-3906) Connection type 'real$[0:2]' is incompatible with 'real' for  port (in_m_i):  Can't mix packed and unpacked types.
-#    Time: 0 ps  Iteration: 0  Instance: /acceleration_3D_tb/UUT/b_1_1 File: C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2.sv Line: 119
+#    Time: 0 ps  Iteration: 0  Instance: /acceleration_3D_tb/UUT/b_1_1 File: C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2.sv Line: 136
 # ** Error: (vsim-3906) Connection type 'real$[0:2]' is incompatible with 'real' for  port (in_m_j):  Can't mix packed and unpacked types.
-#    Time: 0 ps  Iteration: 0  Instance: /acceleration_3D_tb/UUT/b_1_1 File: C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2.sv Line: 119
+#    Time: 0 ps  Iteration: 0  Instance: /acceleration_3D_tb/UUT/b_1_1 File: C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2.sv Line: 136
 # Error loading design
-# End time: 13:23:26 on Jul 24,2020, Elapsed time: 0:00:02
-# Errors: 8, Warnings: 6
-vsim work.acceleration_3D_tb
-# vsim work.acceleration_3D_tb 
-# Start time: 13:23:42 on Jul 24,2020
+# End time: 09:30:38 on Nov 16,2020, Elapsed time: 0:00:01
+# Errors: 8, Warnings: 7
+# Compile of test_code_gen_2x2.sv was successful.
+# Compile of test_code_gen_2x2_tb.sv was successful.
+vsim -gui work.acceleration_3D_tb
+# vsim -gui work.acceleration_3D_tb 
+# Start time: 09:33:26 on Nov 16,2020
 # Loading sv_std.std
 # Loading work.acceleration_3D_tb
 # Loading work.systolic_2x2_3D
 # Loading work.systolic_n_body_3D_cell
-# ** Error: (vsim-3906) Connection type 'real$[0:2]' is incompatible with 'real' for  port (out_m_i):  Can't mix packed and unpacked types.
-#    Time: 0 ps  Iteration: 0  Instance: /acceleration_3D_tb/UUT/b_0_0 File: C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2.sv Line: 95
-# ** Error: (vsim-3906) Connection type 'real$[0:2]' is incompatible with 'real' for  port (out_m_j):  Can't mix packed and unpacked types.
-#    Time: 0 ps  Iteration: 0  Instance: /acceleration_3D_tb/UUT/b_0_0 File: C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2.sv Line: 95
-# ** Error: (vsim-3906) Connection type 'real$[0:2]' is incompatible with 'real' for  port (in_m_i):  Can't mix packed and unpacked types.
-#    Time: 0 ps  Iteration: 0  Instance: /acceleration_3D_tb/UUT/b_0_1 File: C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2.sv Line: 103
-# ** Error: (vsim-3906) Connection type 'real$[0:2]' is incompatible with 'real' for  port (out_m_j):  Can't mix packed and unpacked types.
-#    Time: 0 ps  Iteration: 0  Instance: /acceleration_3D_tb/UUT/b_0_1 File: C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2.sv Line: 103
-# ** Error: (vsim-3906) Connection type 'real$[0:2]' is incompatible with 'real' for  port (in_m_j):  Can't mix packed and unpacked types.
-#    Time: 0 ps  Iteration: 0  Instance: /acceleration_3D_tb/UUT/b_1_0 File: C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2.sv Line: 111
-# ** Error: (vsim-3906) Connection type 'real$[0:2]' is incompatible with 'real' for  port (out_m_i):  Can't mix packed and unpacked types.
-#    Time: 0 ps  Iteration: 0  Instance: /acceleration_3D_tb/UUT/b_1_0 File: C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2.sv Line: 111
-# ** Error: (vsim-3906) Connection type 'real$[0:2]' is incompatible with 'real' for  port (in_m_i):  Can't mix packed and unpacked types.
-#    Time: 0 ps  Iteration: 0  Instance: /acceleration_3D_tb/UUT/b_1_1 File: C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2.sv Line: 119
-# ** Error: (vsim-3906) Connection type 'real$[0:2]' is incompatible with 'real' for  port (in_m_j):  Can't mix packed and unpacked types.
-#    Time: 0 ps  Iteration: 0  Instance: /acceleration_3D_tb/UUT/b_1_1 File: C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2.sv Line: 119
-# Error loading design
-# End time: 13:23:43 on Jul 24,2020, Elapsed time: 0:00:01
-# Errors: 8, Warnings: 2
-vsim work.acceleration_tb
-# vsim work.acceleration_tb 
-# Start time: 13:24:43 on Jul 24,2020
+# Compile of test_code_gen_2x2_tb.sv was successful.
+vsim -gui work.acceleration_3D_tb
+# End time: 09:34:10 on Nov 16,2020, Elapsed time: 0:00:44
+# Errors: 0, Warnings: 4
+# vsim -gui work.acceleration_3D_tb 
+# Start time: 09:34:10 on Nov 16,2020
 # Loading sv_std.std
-# Loading work.acceleration_tb
-# Loading work.systolic_2x2
+# Loading work.acceleration_3D_tb
+# Loading work.systolic_2x2_3D
 # Loading work.systolic_n_body_3D_cell
-# ** Error: (vsim-3906) Connection type 'real' is incompatible with 'real$[0:2]' for  port (q_0i):  Can't mix packed and unpacked types.
-#    Time: 0 ps  Iteration: 0  Instance: /acceleration_tb/UUT File: C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv Line: 148
-# ** Error: (vsim-3906) Connection type 'real' is incompatible with 'real$[0:2]' for  port (q_0j):  Can't mix packed and unpacked types.
-#    Time: 0 ps  Iteration: 0  Instance: /acceleration_tb/UUT File: C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv Line: 148
-# ** Error: (vsim-3906) Connection type 'real' is incompatible with 'real$[0:2]' for  port (q_1i):  Can't mix packed and unpacked types.
-#    Time: 0 ps  Iteration: 0  Instance: /acceleration_tb/UUT File: C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv Line: 148
-# ** Error: (vsim-3906) Connection type 'real' is incompatible with 'real$[0:2]' for  port (q_1j):  Can't mix packed and unpacked types.
-#    Time: 0 ps  Iteration: 0  Instance: /acceleration_tb/UUT File: C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv Line: 148
-# ** Error: (vsim-3906) Connection type 'real' is incompatible with 'real$[0:2]' for  port (pd_0):  Can't mix packed and unpacked types.
-#    Time: 0 ps  Iteration: 0  Instance: /acceleration_tb/UUT File: C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv Line: 148
-# ** Error: (vsim-3906) Connection type 'real' is incompatible with 'real$[0:2]' for  port (pd_1):  Can't mix packed and unpacked types.
-#    Time: 0 ps  Iteration: 0  Instance: /acceleration_tb/UUT File: C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv Line: 148
-# ** Error: (vsim-3906) Connection type 'real' is incompatible with 'real$[0:2]' for  port (pr_0):  Can't mix packed and unpacked types.
-#    Time: 0 ps  Iteration: 0  Instance: /acceleration_tb/UUT File: C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv Line: 148
-# ** Error: (vsim-3906) Connection type 'real' is incompatible with 'real$[0:2]' for  port (pr_1):  Can't mix packed and unpacked types.
-#    Time: 0 ps  Iteration: 0  Instance: /acceleration_tb/UUT File: C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv Line: 148
-# ** Error: (vsim-3906) Connection type 'real' is incompatible with 'real$[0:2]' for  port (out_pd_0):  Can't mix packed and unpacked types.
-#    Time: 0 ps  Iteration: 0  Instance: /acceleration_tb/UUT File: C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv Line: 148
-# ** Error: (vsim-3906) Connection type 'real' is incompatible with 'real$[0:2]' for  port (out_pd_1):  Can't mix packed and unpacked types.
-#    Time: 0 ps  Iteration: 0  Instance: /acceleration_tb/UUT File: C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv Line: 148
-# ** Error: (vsim-3906) Connection type 'real' is incompatible with 'real$[0:2]' for  port (out_pr_0):  Can't mix packed and unpacked types.
-#    Time: 0 ps  Iteration: 0  Instance: /acceleration_tb/UUT File: C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv Line: 148
-# ** Error: (vsim-3906) Connection type 'real' is incompatible with 'real$[0:2]' for  port (out_pr_1):  Can't mix packed and unpacked types.
-#    Time: 0 ps  Iteration: 0  Instance: /acceleration_tb/UUT File: C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv Line: 148
-# Error loading design
-# End time: 13:24:44 on Jul 24,2020, Elapsed time: 0:00:01
-# Errors: 12, Warnings: 1
-vsim work.acceleration_time_tb
-# vsim work.acceleration_time_tb 
-# Start time: 13:24:49 on Jul 24,2020
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv(163)
+#    Time: 10 ps  Iteration: 0  Instance: /acceleration_3D_tb
+# Break in Module acceleration_3D_tb at C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv line 163
+# Break key hit
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv(174)
+#    Time: 20 ps  Iteration: 0  Instance: /acceleration_3D_tb
+# Break in Module acceleration_3D_tb at C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv line 174
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv(185)
+#    Time: 30 ps  Iteration: 0  Instance: /acceleration_3D_tb
+# Break in Module acceleration_3D_tb at C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv line 185
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv(200)
+#    Time: 40 ps  Iteration: 0  Instance: /acceleration_3D_tb
+# Break in Module acceleration_3D_tb at C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv line 200
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv(216)
+#    Time: 50 ps  Iteration: 0  Instance: /acceleration_3D_tb
+# Break in Module acceleration_3D_tb at C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv line 216
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv(230)
+#    Time: 60 ps  Iteration: 0  Instance: /acceleration_3D_tb
+# Break in Module acceleration_3D_tb at C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv line 230
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv(246)
+#    Time: 70 ps  Iteration: 0  Instance: /acceleration_3D_tb
+# Break in Module acceleration_3D_tb at C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv line 246
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv(260)
+#    Time: 80 ps  Iteration: 0  Instance: /acceleration_3D_tb
+# Break in Module acceleration_3D_tb at C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv line 260
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv(274)
+#    Time: 90 ps  Iteration: 0  Instance: /acceleration_3D_tb
+# Break in Module acceleration_3D_tb at C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv line 274
+run
+run
+run
+run
+run
+# Load canceled
+# Load canceled
+# Compile of test_code_gen_2x2_tb.sv was successful.
+vsim -gui work.acceleration_3D_tb
+# End time: 09:39:44 on Nov 16,2020, Elapsed time: 0:05:34
+# Errors: 0, Warnings: 2
+# vsim -gui work.acceleration_3D_tb 
+# Start time: 09:39:44 on Nov 16,2020
 # Loading sv_std.std
-# Loading work.acceleration_time_tb
-# Loading work.systolic_2x2
+# Loading work.acceleration_3D_tb
+# Loading work.systolic_2x2_3D
 # Loading work.systolic_n_body_3D_cell
-# ** Error: (vsim-3906) Connection type 'real' is incompatible with 'real$[0:2]' for  port (q_0i):  Can't mix packed and unpacked types.
-#    Time: 0 ps  Iteration: 0  Instance: /acceleration_time_tb/UUT File: C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv Line: 279
-# ** Error: (vsim-3906) Connection type 'real' is incompatible with 'real$[0:2]' for  port (q_0j):  Can't mix packed and unpacked types.
-#    Time: 0 ps  Iteration: 0  Instance: /acceleration_time_tb/UUT File: C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv Line: 279
-# ** Error: (vsim-3906) Connection type 'real' is incompatible with 'real$[0:2]' for  port (q_1i):  Can't mix packed and unpacked types.
-#    Time: 0 ps  Iteration: 0  Instance: /acceleration_time_tb/UUT File: C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv Line: 279
-# ** Error: (vsim-3906) Connection type 'real' is incompatible with 'real$[0:2]' for  port (q_1j):  Can't mix packed and unpacked types.
-#    Time: 0 ps  Iteration: 0  Instance: /acceleration_time_tb/UUT File: C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv Line: 279
-# ** Error: (vsim-3906) Connection type 'real' is incompatible with 'real$[0:2]' for  port (pd_0):  Can't mix packed and unpacked types.
-#    Time: 0 ps  Iteration: 0  Instance: /acceleration_time_tb/UUT File: C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv Line: 279
-# ** Error: (vsim-3906) Connection type 'real' is incompatible with 'real$[0:2]' for  port (pd_1):  Can't mix packed and unpacked types.
-#    Time: 0 ps  Iteration: 0  Instance: /acceleration_time_tb/UUT File: C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv Line: 279
-# ** Error: (vsim-3906) Connection type 'real' is incompatible with 'real$[0:2]' for  port (pr_0):  Can't mix packed and unpacked types.
-#    Time: 0 ps  Iteration: 0  Instance: /acceleration_time_tb/UUT File: C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv Line: 279
-# ** Error: (vsim-3906) Connection type 'real' is incompatible with 'real$[0:2]' for  port (pr_1):  Can't mix packed and unpacked types.
-#    Time: 0 ps  Iteration: 0  Instance: /acceleration_time_tb/UUT File: C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv Line: 279
-# ** Error: (vsim-3906) Connection type 'real' is incompatible with 'real$[0:2]' for  port (out_pd_0):  Can't mix packed and unpacked types.
-#    Time: 0 ps  Iteration: 0  Instance: /acceleration_time_tb/UUT File: C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv Line: 279
-# ** Error: (vsim-3906) Connection type 'real' is incompatible with 'real$[0:2]' for  port (out_pd_1):  Can't mix packed and unpacked types.
-#    Time: 0 ps  Iteration: 0  Instance: /acceleration_time_tb/UUT File: C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv Line: 279
-# ** Error: (vsim-3906) Connection type 'real' is incompatible with 'real$[0:2]' for  port (out_pr_0):  Can't mix packed and unpacked types.
-#    Time: 0 ps  Iteration: 0  Instance: /acceleration_time_tb/UUT File: C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv Line: 279
-# ** Error: (vsim-3906) Connection type 'real' is incompatible with 'real$[0:2]' for  port (out_pr_1):  Can't mix packed and unpacked types.
-#    Time: 0 ps  Iteration: 0  Instance: /acceleration_time_tb/UUT File: C:/Users/Liam/Documents/SystolicNBody/ModelSim/2x2-systolic-n-body-tb.sv Line: 279
-# Error loading design
-# End time: 13:24:50 on Jul 24,2020, Elapsed time: 0:00:01
-# Errors: 12, Warnings: 1
-vsim work.cell_tb
-# vsim work.cell_tb 
-# Start time: 13:24:53 on Jul 24,2020
-# Loading sv_std.std
-# Loading work.cell_tb
-# Loading work.systolic_n_body_2x2_cell
-quit -sim
-# End time: 13:25:10 on Jul 24,2020, Elapsed time: 0:00:17
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv(162)
+#    Time: 10 ps  Iteration: 0  Instance: /acceleration_3D_tb
+# Break in Module acceleration_3D_tb at C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv line 162
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv(173)
+#    Time: 20 ps  Iteration: 0  Instance: /acceleration_3D_tb
+# Break in Module acceleration_3D_tb at C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv line 173
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv(184)
+#    Time: 30 ps  Iteration: 0  Instance: /acceleration_3D_tb
+# Break in Module acceleration_3D_tb at C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv line 184
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv(199)
+#    Time: 40 ps  Iteration: 0  Instance: /acceleration_3D_tb
+# Break in Module acceleration_3D_tb at C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv line 199
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv(215)
+#    Time: 50 ps  Iteration: 0  Instance: /acceleration_3D_tb
+# Break in Module acceleration_3D_tb at C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv line 215
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv(229)
+#    Time: 60 ps  Iteration: 0  Instance: /acceleration_3D_tb
+# Break in Module acceleration_3D_tb at C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv line 229
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv(245)
+#    Time: 70 ps  Iteration: 0  Instance: /acceleration_3D_tb
+# Break in Module acceleration_3D_tb at C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv line 245
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv(259)
+#    Time: 80 ps  Iteration: 0  Instance: /acceleration_3D_tb
+# Break in Module acceleration_3D_tb at C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv line 259
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv(273)
+#    Time: 90 ps  Iteration: 0  Instance: /acceleration_3D_tb
+# Break in Module acceleration_3D_tb at C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv line 273
+run
+run
+restart
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# No ports found in acceleration_3D_tb
+add wave -position insertpoint /acceleration_3D_tb/a_0
+add wave -position insertpoint /acceleration_3D_tb/a_1
+add wave -position insertpoint /acceleration_3D_tb/a_2
+add wave -position insertpoint /acceleration_3D_tb/a_3
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv(162)
+#    Time: 10 ps  Iteration: 0  Instance: /acceleration_3D_tb
+# Break in Module acceleration_3D_tb at C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv line 162
+add wave -position insertpoint /acceleration_3D_tb/OPD_0
+add wave -position insertpoint /acceleration_3D_tb/OPD_1
+add wave -position insertpoint /acceleration_3D_tb/OPR_0
+add wave -position insertpoint /acceleration_3D_tb/OPR_1
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv(173)
+#    Time: 20 ps  Iteration: 0  Instance: /acceleration_3D_tb
+# Break in Module acceleration_3D_tb at C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv line 173
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv(184)
+#    Time: 30 ps  Iteration: 0  Instance: /acceleration_3D_tb
+# Break in Module acceleration_3D_tb at C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv line 184
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv(199)
+#    Time: 40 ps  Iteration: 0  Instance: /acceleration_3D_tb
+# Break in Module acceleration_3D_tb at C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv line 199
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv(215)
+#    Time: 50 ps  Iteration: 0  Instance: /acceleration_3D_tb
+# Break in Module acceleration_3D_tb at C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv line 215
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv(229)
+#    Time: 60 ps  Iteration: 0  Instance: /acceleration_3D_tb
+# Break in Module acceleration_3D_tb at C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv line 229
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv(245)
+#    Time: 70 ps  Iteration: 0  Instance: /acceleration_3D_tb
+# Break in Module acceleration_3D_tb at C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv line 245
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv(259)
+#    Time: 80 ps  Iteration: 0  Instance: /acceleration_3D_tb
+# Break in Module acceleration_3D_tb at C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv line 259
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv(273)
+#    Time: 90 ps  Iteration: 0  Instance: /acceleration_3D_tb
+# Break in Module acceleration_3D_tb at C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv line 273
+run
+run
+run
+vsim -gui work.systolic_2x2_3D
+# End time: 09:49:22 on Nov 16,2020, Elapsed time: 0:09:38
 # Errors: 0, Warnings: 1
+# vsim -gui work.systolic_2x2_3D 
+# Start time: 09:49:22 on Nov 16,2020
+# Loading sv_std.std
+# Loading work.systolic_2x2_3D
+# Loading work.systolic_n_body_3D_cell
+run
+run
+run
+run
+run
+run
+run
+add wave -position insertpoint {real out_q_i[3];
+real out_q_j[3];
+real out_m_i;
+real out_m_j;
+real out_p_right[3];
+real out_p_down[3];}
+# ** UI-Msg: (vish-4014) No objects found matching 'real out_q_i[3];
+# real out_q_j[3];
+# real out_m_i;
+# real out_m_j;
+# real out_p_right[3];
+# real out_p_down[3];'.
+restart
+run
+run
+run
+add wave -position insertpoint {real out_q_i[3];
+real out_q_j[3];
+real out_m_i;
+real out_m_j;
+real out_p_right[3];
+real out_p_down[3];}
+# ** UI-Msg: (vish-4014) No objects found matching 'real out_q_i[3];
+# real out_q_j[3];
+# real out_m_i;
+# real out_m_j;
+# real out_p_right[3];
+# real out_p_down[3];'.
+run
+add wave -position insertpoint {real out_q_i[3];
+real out_q_j[3];
+real out_m_i;
+real out_m_j;
+real out_p_right[3];
+real out_p_down[3];}
+# ** UI-Msg: (vish-4014) No objects found matching 'real out_q_i[3];
+# real out_q_j[3];
+# real out_m_i;
+# real out_m_j;
+# real out_p_right[3];
+# real out_p_down[3];'.
+run
+run
+run
+run
+# Load canceled
+# Compile of test_code_gen_2x2_tb.sv was successful.
+vsim -gui work.acceleration_3D_tb2
+# End time: 09:53:52 on Nov 16,2020, Elapsed time: 0:04:30
+# Errors: 0, Warnings: 2
+# vsim -gui work.acceleration_3D_tb2 
+# Start time: 09:53:52 on Nov 16,2020
+# Loading sv_std.std
+# Loading work.acceleration_3D_tb2
+# Loading work.systolic_2x2_3D
+# Loading work.systolic_n_body_3D_cell
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv(162)
+#    Time: 10 ps  Iteration: 0  Instance: /acceleration_3D_tb2
+# Break in Module acceleration_3D_tb2 at C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv line 162
+add wave -position insertpoint /acceleration_3D_tb2/a_0
+add wave -position insertpoint /acceleration_3D_tb2/a_1
+add wave -position insertpoint /acceleration_3D_tb2/a_2
+add wave -position insertpoint /acceleration_3D_tb2/a_3
+add wave -position insertpoint /acceleration_3D_tb2/OPD_0
+add wave -position insertpoint /acceleration_3D_tb2/OPD_1
+add wave -position insertpoint /acceleration_3D_tb2/OPR_0
+add wave -position insertpoint /acceleration_3D_tb2/OPR_1
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv(173)
+#    Time: 20 ps  Iteration: 0  Instance: /acceleration_3D_tb2
+# Break in Module acceleration_3D_tb2 at C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv line 173
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv(184)
+#    Time: 30 ps  Iteration: 0  Instance: /acceleration_3D_tb2
+# Break in Module acceleration_3D_tb2 at C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv line 184
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv(199)
+#    Time: 40 ps  Iteration: 0  Instance: /acceleration_3D_tb2
+# Break in Module acceleration_3D_tb2 at C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv line 199
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv(215)
+#    Time: 50 ps  Iteration: 0  Instance: /acceleration_3D_tb2
+# Break in Module acceleration_3D_tb2 at C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv line 215
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv(229)
+#    Time: 60 ps  Iteration: 0  Instance: /acceleration_3D_tb2
+# Break in Module acceleration_3D_tb2 at C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv line 229
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv(245)
+#    Time: 70 ps  Iteration: 0  Instance: /acceleration_3D_tb2
+# Break in Module acceleration_3D_tb2 at C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv line 245
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv(259)
+#    Time: 80 ps  Iteration: 0  Instance: /acceleration_3D_tb2
+# Break in Module acceleration_3D_tb2 at C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv line 259
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv(273)
+#    Time: 90 ps  Iteration: 0  Instance: /acceleration_3D_tb2
+# Break in Module acceleration_3D_tb2 at C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv line 273
+run
+run
+run
+run
+# Load canceled
+# Compile of NxN-systolic-n-body-tb.sv was successful.
+vsim -gui work.NxN_cell_tb
+# End time: 09:56:17 on Nov 16,2020, Elapsed time: 0:02:25
+# Errors: 0, Warnings: 2
+# vsim -gui work.NxN_cell_tb 
+# Start time: 09:56:17 on Nov 16,2020
+# Loading sv_std.std
+# Loading work.NxN_cell_tb
+# Loading work.systolic_n_body_3D_cell
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/NxN-systolic-n-body-tb.sv(60)
+#    Time: 5 ps  Iteration: 0  Instance: /NxN_cell_tb
+# Break in Module NxN_cell_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/NxN-systolic-n-body-tb.sv line 60
+add wave -position insertpoint /NxN_cell_tb/out_p_right
+add wave -position insertpoint /NxN_cell_tb/out_p_down
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/ModelSim/NxN-systolic-n-body-tb.sv(71)
+#    Time: 15 ps  Iteration: 0  Instance: /NxN_cell_tb
+# Break in Module NxN_cell_tb at C:/Users/Liam/Documents/SystolicNBody/ModelSim/NxN-systolic-n-body-tb.sv line 71
+run
+run
+vsim -gui work.NxN_cell_tb2
+# End time: 09:58:25 on Nov 16,2020, Elapsed time: 0:02:08
+# Errors: 0, Warnings: 1
+# vsim -gui work.NxN_cell_tb2 
+# Start time: 09:58:25 on Nov 16,2020
+# Loading sv_std.std
+# Loading work.NxN_cell_tb2
+# Loading work.systolic_n_body_3D_cell
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv(58)
+#    Time: 5 ps  Iteration: 0  Instance: /NxN_cell_tb2
+# Break in Module NxN_cell_tb2 at C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv line 58
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv(69)
+#    Time: 15 ps  Iteration: 0  Instance: /NxN_cell_tb2
+# Break in Module NxN_cell_tb2 at C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv line 69
+vsim -gui work.acceleration_3D_tb2
+# End time: 09:59:53 on Nov 16,2020, Elapsed time: 0:01:28
+# Errors: 0, Warnings: 1
+# vsim -gui work.acceleration_3D_tb2 
+# Start time: 09:59:53 on Nov 16,2020
+# Loading sv_std.std
+# Loading work.acceleration_3D_tb2
+# Loading work.systolic_2x2_3D
+# Loading work.systolic_n_body_3D_cell
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv(162)
+#    Time: 10 ps  Iteration: 0  Instance: /acceleration_3D_tb2
+# Break in Module acceleration_3D_tb2 at C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv line 162
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv(173)
+#    Time: 20 ps  Iteration: 0  Instance: /acceleration_3D_tb2
+# Break in Module acceleration_3D_tb2 at C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv line 173
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv(184)
+#    Time: 30 ps  Iteration: 0  Instance: /acceleration_3D_tb2
+# Break in Module acceleration_3D_tb2 at C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv line 184
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv(199)
+#    Time: 40 ps  Iteration: 0  Instance: /acceleration_3D_tb2
+# Break in Module acceleration_3D_tb2 at C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv line 199
+run
+run
+# ** Note: $stop    : C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv(215)
+#    Time: 50 ps  Iteration: 0  Instance: /acceleration_3D_tb2
+# Break in Module acceleration_3D_tb2 at C:/Users/Liam/Documents/SystolicNBody/VerilogCodeGen/test_code_gen_2x2_tb.sv line 215

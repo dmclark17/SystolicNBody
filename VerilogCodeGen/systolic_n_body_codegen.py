@@ -133,11 +133,11 @@ def generate_design_code(N):
                      for i in range(N - 1) for j in range(N)])[:-1] + ';')
     code += ('\n\n  // The mass passing wires to the right out of (i, j)\n'
              '\n  real ' +
-             s.join(['m_{0}_{1}_i[3],'.format(i, j)
+             s.join(['m_{0}_{1}_i,'.format(i, j)
                      for i in range(N) for j in range(N - 1)])[:-1] + ';')
     code += ('\n\n  // The mass passing wires downwards out of (i, j)\n'
              '\n  real ' +
-             s.join(['m_{0}_{1}_j[3],'.format(i, j)
+             s.join(['m_{0}_{1}_j,'.format(i, j)
                      for i in range(N - 1) for j in range(N)])[:-1] + ';')
 
     # the systolic cells. Cases for edges of array use input/output of module
@@ -617,7 +617,7 @@ def generate_testbench_code(N, n):
     code += ('\n\nend\n\n'
              '// always have clk taking care of sync across cells\n'
              'initial begin\n'
-             '  forever #5 clk = ~clk;]\n'
+             '  forever #5 clk = ~clk;\n'
              'end\n\n'
              'endmodule')
 
